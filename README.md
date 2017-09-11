@@ -2,4 +2,4 @@
 
 > 还未更新敬请期待
 
-![Blog](/web/assets/img/blog.png)
+![Blog](/web/assets/img/jietu.png)
