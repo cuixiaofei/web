@@ -3,5 +3,5 @@
 deploy:
 	git add .
 	git commit -m "update"
-	echo cuixiaofei\n | 'git push origin gh-pages'
-	
+	git push origin gh-pages
+	echo cuixiaofei\n
