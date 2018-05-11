@@ -75,9 +75,9 @@
 之前使用时候都没有写下来该怎么用，自己还经常忘记，今天又发生了代码误删？的情况所以这回要学会了。</p>
 <blockquote>
   <p>首先是检查git的版本，看一看集群上安装了什么版本:</p>
-  <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre><span class="nv">$git</span> <span class="nt">--version</span>
+</pre></td><td class="rouge-code"><pre>$git --version
 git version 1.8.2.1
 </pre></td></tr></tbody></table></code></pre></div>  </div>
   <p>好的，下一步是了解基本概念，什么是git:
@@ -88,13 +88,13 @@ git version 1.8.2.1
 接下来就是使用了:</p>
   <blockquote>
     <p>创建仓库git初始化</p>
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre><span class="nv">$git</span> init
-初始化空的 Git 版本库于 <span class="nv">$你</span>的目录/需要管理的文件夹/.git/
+</pre></td><td class="rouge-code"><pre>$git init
+初始化空的 Git 版本库于 $你的目录/需要管理的文件夹/.git/
 </pre></td></tr></tbody></table></code></pre></div>    </div>
     <p>查看工作目录状态</p>
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -103,18 +103,18 @@ git version 1.8.2.1
 7
 8
 9
-</pre></td><td class="rouge-code"><pre><span class="nv">$git</span> status
-<span class="c"># 位于分支 master</span>
-<span class="c">#</span>
-<span class="c"># 初始提交</span>
-<span class="c">#</span>
-<span class="c"># 未跟踪的文件:</span>
-<span class="c">#   （使用 "git add &lt;file&gt;..." 以包含要提交的内容）</span>
-<span class="c">#	文件列表</span>
-提交为空，但是存在尚未跟踪的文件（使用 <span class="s2">"git add"</span> 建立跟踪）
+</pre></td><td class="rouge-code"><pre>$git status
+# 位于分支 master
+#
+# 初始提交
+#
+# 未跟踪的文件:
+#   （使用 "git add &lt;file&gt;..." 以包含要提交的内容）
+#	文件列表
+提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
 </pre></td></tr></tbody></table></code></pre></div>    </div>
     <p>建立工作空间Workspace</p>
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -124,16 +124,16 @@ git version 1.8.2.1
 8
 9
 10
-</pre></td><td class="rouge-code"><pre><span class="nv">$git</span> add <span class="nb">.</span>
-<span class="nv">$git</span> staus
-<span class="c"># 位于分支 master</span>
-<span class="c">#</span>
-<span class="c"># 初始提交</span>
-<span class="c">#</span>
-<span class="c"># 要提交的变更：</span>
-<span class="c">#   （使用 "git rm --cached &lt;file&gt;..." 撤出暂存区）</span>
-<span class="c">#</span>
-<span class="c">#	新文件：    文件列表</span>
+</pre></td><td class="rouge-code"><pre>$git add .
+$git staus
+# 位于分支 master
+#
+# 初始提交
+#
+# 要提交的变更：
+#   （使用 "git rm --cached &lt;file&gt;..." 撤出暂存区）
+#
+#	新文件：    文件列表
 </pre></td></tr></tbody></table></code></pre></div>    </div>
     <p>参考1:<a href="http://www.cnblogs.com/wilber2013/category/643754.html">Git Step by Step</a></p>
   </blockquote>
