@@ -81,10 +81,10 @@
 <p>之前使用时候都没有写下来该怎么用，自己还经常忘记，今天又发生了代码误删？的情况所以这回要学会了。</p>
 <blockquote>
   <p>首先是检查git的版本，看一看集群上安装了什么版本:</p>
-  <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+  <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre><span class="nv">$git</span> <span class="nt">--version</span>
-git version 1.8.2.1
+</pre></td><td class="rouge-code"><pre><span class="n">$git</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">git</span> <span class="n">version</span> <span class="mf">1.8</span><span class="o">.</span><span class="mf">2.1</span>
 </pre></td></tr></tbody></table></code></pre></div>  </div>
   <p>好的，下一步是了解基本概念，什么是git:
 在Git中，每个版本库都叫做一个仓库（repository），每个仓库可以简单理解成一个目录，这个目录里面的所有文件都通过Git来实现版本管理，Git都能跟踪并记录在该目录中发生的所有更新。
@@ -94,13 +94,13 @@ git version 1.8.2.1
 接下来就是使用了:</p>
   <blockquote>
     <p>创建仓库git初始化</p>
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre><span class="nv">$git</span> init
-初始化空的 Git 版本库于 <span class="nv">$你</span>的目录/需要管理的文件夹/.git/
+</pre></td><td class="rouge-code"><pre><span class="n">$git</span> <span class="n">init</span>
+<span class="err">初始化空的</span> <span class="n">Git</span> <span class="err">版本库于</span> <span class="n">$</span><span class="err">你的目录</span><span class="s">/需要管理的文件夹/</span><span class="o">.</span><span class="na">git</span><span class="o">/</span>
 </pre></td></tr></tbody></table></code></pre></div>    </div>
     <p>查看工作目录状态</p>
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -109,18 +109,18 @@ git version 1.8.2.1
 7
 8
 9
-</pre></td><td class="rouge-code"><pre><span class="nv">$git</span> status
-<span class="c"># 位于分支 master</span>
-<span class="c">#</span>
-<span class="c"># 初始提交</span>
-<span class="c">#</span>
-<span class="c"># 未跟踪的文件:</span>
-<span class="c">#   （使用 "git add &lt;file&gt;..." 以包含要提交的内容）</span>
-<span class="c">#	文件列表</span>
-提交为空，但是存在尚未跟踪的文件（使用 <span class="s2">"git add"</span> 建立跟踪）
+</pre></td><td class="rouge-code"><pre><span class="n">$git</span> <span class="n">status</span>
+<span class="err">#</span> <span class="err">位于分支</span> <span class="n">master</span>
+<span class="err">#</span>
+<span class="err">#</span> <span class="err">初始提交</span>
+<span class="err">#</span>
+<span class="err">#</span> <span class="err">未跟踪的文件</span><span class="o">:</span>
+<span class="err">#</span>   <span class="err">（使用</span> <span class="s2">"git add &lt;file&gt;..."</span> <span class="err">以包含要提交的内容）</span>
+<span class="err">#</span>	<span class="err">文件列表</span>
+<span class="err">提交为空，但是存在尚未跟踪的文件（使用</span> <span class="s2">"git add"</span> <span class="err">建立跟踪）</span>
 </pre></td></tr></tbody></table></code></pre></div>    </div>
     <p>建立工作空间Workspace</p>
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -130,16 +130,16 @@ git version 1.8.2.1
 8
 9
 10
-</pre></td><td class="rouge-code"><pre><span class="nv">$git</span> add <span class="nb">.</span>
-<span class="nv">$git</span> staus
-<span class="c"># 位于分支 master</span>
-<span class="c">#</span>
-<span class="c"># 初始提交</span>
-<span class="c">#</span>
-<span class="c"># 要提交的变更：</span>
-<span class="c">#   （使用 "git rm --cached &lt;file&gt;..." 撤出暂存区）</span>
-<span class="c">#</span>
-<span class="c">#	新文件：    文件列表</span>
+</pre></td><td class="rouge-code"><pre><span class="n">$git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">$git</span> <span class="n">staus</span>
+<span class="err">#</span> <span class="err">位于分支</span> <span class="n">master</span>
+<span class="err">#</span>
+<span class="err">#</span> <span class="err">初始提交</span>
+<span class="err">#</span>
+<span class="err">#</span> <span class="err">要提交的变更：</span>
+<span class="err">#</span>   <span class="err">（使用</span> <span class="s2">"git rm --cached &lt;file&gt;..."</span> <span class="err">撤出暂存区）</span>
+<span class="err">#</span>
+<span class="err">#</span>	<span class="err">新文件：</span>    <span class="err">文件列表</span>
 </pre></td></tr></tbody></table></code></pre></div>    </div>
     <p>参考1:<a href="http://www.cnblogs.com/wilber2013/category/643754.html">Git Step by Step</a></p>
   </blockquote>
