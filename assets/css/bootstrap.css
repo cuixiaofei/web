@@ -1452,6 +1452,9 @@ dt {
 dd {
   margin-left: 0;
 }
+/* ================================
+ * Understand the simplify showlines
+ * ===============================*/
 @media (min-width: 768px) {
   .dl-horizontal dt {
     float: left;
@@ -2261,12 +2264,9 @@ caption {
 th {
   text-align: left;
 }
-/* ================================
- * Understand the lines simplify
- * ===============================*/
 .table {
-  width: 30%;
-  max-width: 30%;
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 20px;
 }
 .table > thead > tr > th,

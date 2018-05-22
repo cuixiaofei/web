@@ -120,8 +120,16 @@ article.preview {
     text-align: left;
 }
 
+//cxf
 .post-section {
     font-size: 15px;
+
+    //cxf
+    border-bottom: 1px solid #ecf0f1;
+    border-top: 1px solid #ecf0f1;
+    margin-bottom: 2em;
+    padding: .5em 1em;
+    line-height: 1.2em;
 }
 
 .post-time {
@@ -134,10 +142,11 @@ article.preview {
     margin-bottom: 1em;
 }
 
+//cxf
 p.readmore {
     color: #337ab7;
     margin-top: 1em;
-    text-align: right;
+    text-align: left;
 }
 
 /**
