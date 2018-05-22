@@ -120,7 +120,7 @@ article.preview {
 .post-title {
 
     //题目位置
-    text-align: center;
+    text-align: left;
 }
 
 //主页文章内容设置,这里仅设置了字体
@@ -140,6 +140,7 @@ article.preview {
 
 //cxf
 p.readmore {
+    font-size: 16px;
     color: #337ab7;
     margin-top: 1em;
     //(更多)按钮位置
