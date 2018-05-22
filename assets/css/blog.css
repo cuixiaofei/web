@@ -116,20 +116,16 @@ article.preview {
     margin-bottom: 4em;
 }
 
+//cxf
 .post-title {
-    text-align: left;
+
+    //题目位置
+    text-align: center;
 }
 
-//cxf
+//主页文章内容设置,这里仅设置了字体
 .post-section {
     font-size: 15px;
-
-    border-bottom: 1px solid #ecf0f1;
-    border-top: 1px solid #ecf0f1;
-    margin-bottom: 2em;
-    padding: .5em 1em;
-    line-height: 1.2em;
-
 }
 
 .post-time {
@@ -146,6 +142,7 @@ article.preview {
 p.readmore {
     color: #337ab7;
     margin-top: 1em;
+    //(更多)按钮位置
     text-align: left;
 }
 
