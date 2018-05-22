@@ -2261,9 +2261,12 @@ caption {
 th {
   text-align: left;
 }
+/* ================================
+ * Understand the lines simplify
+ * ===============================*/
 .table {
   width: 100%;
-  max-width: 100%;
+  max-width: 30%;
   margin-bottom: 20px;
 }
 .table > thead > tr > th,
