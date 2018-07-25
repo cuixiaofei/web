@@ -3,16 +3,17 @@
 
 /* Header */
 .bloghead {
-    position: relative;
-    /*padding: 2rem 1rem;*/
-    font-weight: 200;
-    color: #333;
-    text-align: left;;
-    /*text-shadow: 0 1px 0 rgba(0,0,0,.1);*/
-    background-color: #fff;
-    max-width: 650px;
-    width: 90%;
-    margin: 30px auto;
+  position: relative;
+  /*padding: 2rem 1rem;*/
+  font-weight: 200;
+  color: #333;
+  text-align: left;;
+  /*text-shadow: 0 1px 0 rgba(0,0,0,.1);*/
+  background-color: #fff;
+  max-width: 700px;
+  width: 90%;
+  margin: 30px auto;
+
   /*background-color: #6f5499;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#563d7c), to(#6f5499));
   background-image: -webkit-linear-gradient(top, #563d7c 0%, #6f5499 100%);
@@ -23,7 +24,7 @@
 }
 
 .authorheader {
-    text-align: left;
+  text-align: left;
 }
 
 .blogtitle {
@@ -56,7 +57,7 @@ nav {
   border-top: 1px solid #ecf0f1;
   margin-bottom: 2em;
   text-align: center;
-  max-width: 650px;
+  max-width: 700px;
   /*margin: 20px auto 2em auto;*/
 }
 
@@ -104,7 +105,7 @@ nav.menu li:last-child {
  */
 
 .blogmain {
-    max-width: 650px;
+    max-width: 700px;
     width: 90%;
     margin: 20px auto;
     font-family: "Roboto Slab", "Merriweather", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
@@ -116,33 +117,41 @@ article.preview {
     margin-bottom: 4em;
 }
 
-//cxf
+/*cxf*/
 .post-title {
 
-    //题目位置
-    text-align: left;
+    /*题目位置*/
+    text-align: center;
 }
 
-//主页文章内容设置,这里仅设置了字体
+/*主页文章内容设置*/
 .post-section {
     font-size: 15px;
-    //
     position:relative;
-    line-height:1.4em;
-    /* 3 times the line-height to show 3 lines */
-    height:4.2em;
+    line-height:1.8em;
+    /* 8 times the line-height to show 8 lines */
+    height:14.4em;
+
     overflow:hidden;
+    /*
+     * 这里可以修改内容溢出显示
+     * overflow:hidden;原有溢出显示
+     * 新的:          
+     * */
 }
+
 .post-section::after {
-    content:"...";
+    content:".....";
     font-weight:bold;
     position:absolute;
     bottom:0;
     right:0;
-    padding:0 20px 1px 45px;
+    padding:0 30px 2px 40px;
     background:url(http://newimg88.b0.upaiyun.com/newimg88/2014/09/ellipsis_bg.png) repeat-y;
+    /*background:url(http://) repeat-x;
+    background-image:url();
+    background-repeat:repeat-y;*/
 }
-
 
 .post-time {
     color: #95a5a6;
@@ -154,13 +163,13 @@ article.preview {
     margin-bottom: 1em;
 }
 
-//cxf
+/*cxf*/
 p.readmore {
-    font-size: 16px;
-    color: #337ab7;
-    margin-top: 1em;
-    //(更多)按钮位置
-    text-align: left;
+  font-size: 16px;
+  color: #337ab7;
+  margin-top: 1em;
+  /*(阅读全文)按钮位置*/
+  text-align: right;
 }
 
 /**

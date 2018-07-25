@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>如何用ROOT做联合拟合？</title>
+  <meta name="description" content="如何做联合拟合？首先这里就是应用Roofit的例子(Tutorials)来学习做联合拟合(SimutaneousFit)，这是一个比较常用的东西。这里就试着来看看例子">
+
+  <link rel="canonical" href="https://cuixiaofei.github.io/2018/06/25/method5.html">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/blog.css">
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
+
+  <link rel="icon" type="image/png" href="/assets/img/avatar.JPG">
+
+  <!-- Google fonts -->
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300' type='text/css'>
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css'>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.min.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+    <body>
+        <header class="bloghead">
+    <dev class="authorheader">
+      <a href="">
+            <img alt="My Avatar" src="/assets/img/avatar.JPG"/>
+        </a>
+        <dev class="blogtitle">
+          <h1><a href="">Xiaofei</a></h1>
+            <h5> 奇妙发现世界～～ </h5>
+        </dev>
+    </dev>
+
+    <nav class="menu" role="nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+            <li>|</li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li>|</li>
+            <!-- 修改 -->
+            <li><a target="_blank" href="https://github.com/cuixiaofei/web">Github</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="/about.html"> About Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <main class="blogmain">
+            <header>
+                <h1 class="article-title">如何用ROOT做联合拟合？</h1>
+                <p class="article-time">
+                    2018年06月25日 星期一,  发表于 <span>北京</span>
+                </p>
+                <p class="article-hint">
+                    如果你对本小站有任何的建议或者疑问, 可以在
+                    <a href="https://github.com/cuixiaofei/web/issues" target="_blank">提交Issues</a>, 谢谢! :)
+                </p>
+            </header>
+            <p><strong>如何做联合拟合？</strong></p>
+
+<p>首先这里就是应用Roofit的例子(Tutorials)来学习做联合拟合(SimutaneousFit)，这是一个比较常用的东西。</p>
+
+<p>这里就试着来看看例子</p>
+
+<pre><code>首先这里是个声明，在总的ROOT体系里使用了[LGPL2.1协议](https://root.cern.ch/license)，这位WouterVerkerke贡献了该例子
+//////////////////////////////////////////////////////////////////////////
+//
+// 'ORGANIZATION AND SIMULTANEOUS FITS' RooFit tutorial macro #501
+// 
+// Using simultaneous p.d.f.s to describe simultaneous fits to multiple
+// datasets
+//
+// 07/2008 - Wouter Verkerke 
+// 
+/////////////////////////////////////////////////////////////////////////
+
+// 头文件，名字起的很有代表性，大家用的程序要有编程规范，不然容易乱套
+// 其实主要是需要编译时最需要，不过编译好久没有用了，现在我不太会了忘记了，一般找个MakeFile比较好
+// CMake是用来写MakeFile的编译工具，很有意思，MakeFile用来指挥编译按步骤进行，CMake用来写指挥MakeFile如何写
+
+#ifndef __CINT__
+#include "RooGlobalFunc.h"
+#endif
+#include "RooRealVar.h"
+#include "RooDataSet.h"
+#include "RooGaussian.h"
+#include "RooConstVar.h"
+#include "RooChebychev.h"
+#include "RooAddPdf.h"
+#include "RooSimultaneous.h"
+#include "RooCategory.h"
+#include "TCanvas.h"
+#include "TAxis.h"
+#include "RooPlot.h"
+
+// 命名空间，像一种局部用的目录，防止重名，当然没遇到重的所以暂时还不懂
+using namespace RooFit ;
+
+void rf501_simultaneouspdf()
+{
+  // C r e a t e   m o d e l   f o r   p h y s i c s   s a m p l e
+  // -------------------------------------------------------------
+  // Create observables
+  // 这里首先定义了变量x用来构建实验分布的模型
+  RooRealVar x("x","x",-8,8) ;
+
+  // Construct signal pdf
+  // 定义了信号的概率密度函数，这里有中心值、sigma自变量x一起构造高斯函数
+  RooRealVar mean("mean","mean",0,-8,8) ;
+  RooRealVar sigma("sigma","sigma",0.3,0.1,10) ;
+  RooGaussian gx("gx","gx",x,mean,sigma) ;
+
+  // Construct background pdf
+  // 类似于前面构造二阶切比雪夫作为本底概率密度函数，a0和a1作为其中系数
+  RooRealVar a0("a0","a0",-0.1,-1,1) ;
+  RooRealVar a1("a1","a1",0.004,-1,1) ;
+  RooChebychev px("px","px",x,RooArgSet(a0,a1)) ;
+
+  // Construct composite pdf
+  // 再次定义变量f，作为最后构造的物理分布模型的自变量，所得值为上两函数的和，用了RooArgList类
+  RooRealVar f("f","f",0.2,0.,1.);
+  RooAddPdf model("model","model",RooArgList(gx,px),f);
+
+  // C r e a t e   m o d e l   f o r   c o n t r o l   s a m p l e
+  // --------------------------------------------------------------
+  // Construct signal pdf. 
+  // NOTE that sigma is shared with the signal sample model
+  RooRealVar mean_ctl("mean_ctl","mean_ctl",-3,-8,8) ;
+  RooGaussian gx_ctl("gx_ctl","gx_ctl",x,mean_ctl,sigma) ;
+
+  // Construct the background pdf
+  RooRealVar a0_ctl("a0_ctl","a0_ctl",-0.1,-1,1) ;
+  RooRealVar a1_ctl("a1_ctl","a1_ctl",0.5,-0.1,1) ;
+  RooChebychev px_ctl("px_ctl","px_ctl",x,RooArgSet(a0_ctl,a1_ctl)) ;
+
+  // Construct the composite model
+  RooRealVar f_ctl("f_ctl","f_ctl",0.5,0.,1.) ;
+  RooAddPdf model_ctl("model_ctl","model_ctl",RooArgList(gx_ctl,px_ctl),f_ctl) ;
+
+  // G e n e r a t e   e v e n t s   f o r   b o t h   s a m p l e s 
+  // ---------------------------------------------------------------
+  // Generate 1000 events in x and y from model
+  RooDataSet *data = model.generate(RooArgSet(x),100) ;
+  RooDataSet *data_ctl = model_ctl.generate(RooArgSet(x),2000) ;
+
+  // C r e a t e   i n d e x   c a t e g o r y   a n d   j o i n   s a m p l e s 
+  // ---------------------------------------------------------------------------
+  // Define category to distinguish physics and control samples events
+  // 这里定义了一个目录其中命名均为字符串，所以名字里面空格会识别为字符，所以要谨慎，加不加空格是两个名字
+  RooCategory sample("sample","sample") ;
+  sample.defineType("physics") ;
+  sample.defineType("control") ;
+
+  // Construct combined dataset in (x,sample)
+  // 将数据导入到RooDataSet里面，其中有目录Index(sample)，还有变量x，并将目录中的名字与数据集关联起来
+  RooDataSet combData("combData","combined data",x,Index(sample),Import("physics",*data),Import("control",*data_ctl)) ;
+
+  // C o n s t r u c t   a   s i m u l t a n e o u s   p d f   i n   ( x , s a m p l e )
+  // -----------------------------------------------------------------------------------
+  // Construct a simultaneous pdf using category sample as index
+  // 这里我们将之前定义的目录送入RooSimultaneous类中去，然后
+  RooSimultaneous simPdf("simPdf","simultaneous pdf",sample) ;
+
+  // 这里将之前定义的分布模型放到RooSimultaneous类的sample里面去，
+  // Associate model with the physics state and model_ctl with the control state
+  simPdf.addPdf(model,"physics") ;
+  simPdf.addPdf(model_ctl,"control") ;
+
+  // 这里将数据进行拟合，拟合的目标物理分布的模型就是前面的
+  // P e r f o r m   a   s i m u l t a n e o u s   f i t
+  // ---------------------------------------------------
+  // Perform simultaneous fit of model to data and model_ctl to data_ctl
+  simPdf.fitTo(combData) ;
+  // 到此为止，就完成了拟合的计算过程，其实已经结束了，只是不直观要画图
+  // 可以看出，RooSimultaneous就是一个类中包含了多个模型，这些多个模型的公共参数用来描绘共同的一个物理分布。
+  // 这种多个模型，可以来自于不同衰变道，也可以来自于不同的样本如例子中随机产生的物理分布和控制样本。
+
+  // P l o t   m o d e l   s l i c e s   o n   d a t a    s l i c e s 
+  // ----------------------------------------------------------------
+  // Make a frame for the physics sample
+  // 画图的RooPlot，用来载入画图的内容，在这里定义了分bin
+  RooPlot* frame1 = x.frame(Bins(30),Title("Physics sample")) ;
+
+  // Plot all data tagged as physics sample
+  // 将数据画在上面定义的frame1中，并且通过Cut条件只看physics目录的内容
+  combData.plotOn(frame1,Cut("sample==sample::physics")) ;
+
+  // Plot "physics" slice of simultaneous pdf. 
+  // NBL You _must_ project the sample index category with data using ProjWData 
+  // as a RooSimultaneous makes no prediction on the shape in the index category 
+  // and can thus not be integrated
+  simPdf.plotOn(frame1,Slice(sample,"physics"),ProjWData(sample,combData)) ;
+  // 这里可以看到是又画了一次，这次是单独画的本底用的kDashed的线，可以按后面给的方法搜索类型继续看
+  simPdf.plotOn(frame1,Slice(sample,"physics"),Components("px"),ProjWData(sample,combData),LineStyle(kDashed)) ;
+
+  // 定义第二个图的画图的frame
+  // The same plot for the control sample slice
+  RooPlot* frame2 = x.frame(Bins(30),Title("Control sample")) ;
+  combData.plotOn(frame2,Cut("sample==sample::control")) ;
+  simPdf.plotOn(frame2,Slice(sample,"control"),ProjWData(sample,combData)) ;
+  simPdf.plotOn(frame2,Slice(sample,"control"),Components("px_ctl"),ProjWData(sample,combData),LineStyle(kDashed)) ;
+
+  // 定义好画布，将前面的frame调用Draw()成员函数，就画图了
+  TCanvas* c = new TCanvas("rf501_simultaneouspdf","rf403_simultaneouspdf",800,400);
+  c-&gt;Divide(2) ;
+  c-&gt;cd(1) ; gPad-&gt;SetLeftMargin(0.15) ; frame1-&gt;GetYaxis()-&gt;SetTitleOffset(1.4) ; frame1-&gt;Draw() ;
+  c-&gt;cd(2) ; gPad-&gt;SetLeftMargin(0.15) ; frame2-&gt;GetYaxis()-&gt;SetTitleOffset(1.4) ; frame2-&gt;Draw() ;
+}
+</code></pre>
+
+<p>实际上，我们看完上面的内容就可以了解到<strong>其实我们什么都没有做!</strong>我们做的仅仅是:</p>
+
+<pre><code>头文件
+函数{
+  定义预期的多个模型model(RooAddPdf)
+  数据data(DataSet),按照样本目录加载
+  调用联合拟合类(RooSimultaneous).fitTo(data)
+  画图,信号本底
+}
+</code></pre>
+
+<p>其他的当然也是类似，是计算机帮我们完成了这些操作，当然如涉及到其背后是如何工作的则要继续了解simultaneous背后的数学是如何工作的，比如具体的误差它是如何计算的？整体是如何实现自动化的?编程?不存在的，可以放后去了解。这也学就是我们称之为脚本的原因吧。那么有没有办法不写这么多字呢好头大啊？有的，有的人用Python写脚本，有的人直接用PyROOT，有的可以使用Snippet来填空，可惜我还不会。</p>
+
+<p><strong>继续试着学ROOT</strong></p>
+
+<p>当然有人教问一下别人，或者有人给脚本，就很快可以用很快可以学会。如果用了之后还要继续学，看别的ROOT经常发生完全看不懂，受到惊吓，我们这里试着想一想办法。</p>
+
+<p>首先想到的就是，看一看例子tutorial，所以这里是这样写的来看看如何做联合拟合，还会继续写的实际。</p>
+
+<p>一个是搜索使用的类的定义，在网站这里<a href="https://root.cern.ch/doc/master/annotated.html">ClassIndex</a>搜索ProjWData这个成员，也可以在<a href="https://root.cern.ch/doc/master/annotated.html">ClassList</a>可以用搜索框或者是按类找名字ctrl+f都可以。
+可以看到，其定义有两个如下：</p>
+
+<p>第一个定义可以看出，其可有两个变量，一是数据集RooDataSet(RooAbsData三个成员中的一个)，如下图，第二个可能用于分bin的问题，<img src="/assets/img/RooAbsData.png" alt="" /></p>
+<pre><code>RooFit::ProjWData  ( const RooAbsData &amp; projData, 
+Bool_t  binData = kFALSE
+)
+</code></pre>
+
+<p>从这里上下两个定义可以看出，ROOT软件包整体内部命名是十分规范的，我们在使用的时候也要尽量把变量函数名写的清楚易懂有一定的规范。当然，如果有较为统一的规范是不容易的，因为在传统研究中各种不同群体都有可能产生各自内部的“独特语言系统”。</p>
+
+<p>第二个定义可以看出，其可有三个变量，一是从数据集里取数据的方法(RooCategory是其中一个)，第二个见上，第三个可能用于分bin的问题</p>
+<pre><code>RooFit::ProjWData  ( const RooArgSet &amp; projSet,
+const RooAbsData &amp; projData,
+Bool_t binData = kFALSE
+)
+</code></pre>
+
+<p>可以看出我们这里使用了两次，一次第一个定义，一次第二个定义，并且没有用bin变量。
+这样我们通过查看这些的定义关系，有助于梳理清楚他们的调用关系，用起来就不会发怵。
+所谓计算机程序就是一大堆的相互调用，从ifelse编译一直调用到逻辑门基本不会出错，如果出现问题，就查看定义看哪里调用跑丢了，如果能够解决好把调用的类型放对了，一般程序都能正常运行，就像喂小猫一样。
+如果想要训练一下编程时候的脑子，其实有清晰一点的编程比如说用G语言LabVIEW，你可以看数据流，并且简单的编程结构也比较直观，实际应用也比较广泛，比如BESIII值班室的控制系统，可以看到很多都是使用LabVIEW编的。另外甚至可以打打游戏也能训练，如<a href="">Zachronic</a>公司旗下的游戏都很硬核，还有辅助学习各种编程语言的<a href="www.codingame.com">Codingame</a>非常有趣。</p>
+
+<p>可以在网上<a href="https://root-forum.cern.ch">ROOT Forum</a>看别人遇到了什么问题，如果身边没人也可以试着问，这里提供一个问问题模板<a href="https://root-forum.cern.ch/t/how-to-automatically-generate-classes-code/4667">参考</a>:</p>
+<pre><code>&gt; Hi,
+&gt; I want to do sth.
+&gt; I have learned "sth. or some class" which helps me in doing sth. This looks like it could help me but I don't know HOW.
+&gt; I need to to do similar processing but for a different "sth.? dataset?". 
+&gt; Could some body guide me to the Documentation or Tutorials for doing this?
+&gt; 
+&gt; Thanks
+&gt; "yourname"
+&gt; 
+&gt; Sample: "your sample idea"
+&gt; Code:"your sample code"
+</code></pre>
+<p>可以找一个改改用，也可以直接随便问(English)，毕竟是论坛嘛。主要是可以看看大家都在关心什么问题，可以了解一下。开放研究之所以可能。</p>
+
+
+            <footer class="article-footer">
+    <div class="authorimage">
+      <img src="/assets/img/avatar.JPG" alt="My Avatar" class="img-circle">
+    </div>
+    <section class="author">
+      <h4><a href="/about.html">小非</a></h4>
+        <a href="mailto:cui_xiaofei@163.com">cui_xiaofei@163.com</a>
+    </section>
+</footer>
+
+        </main>
+
+        <div class="footer-copyright">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                Copyright &copy; 2018 崔小非 - All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74743250-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    </body>
+
+</html>
