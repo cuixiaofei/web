@@ -120,6 +120,7 @@ void rf501_simultaneouspdf()
 
   // Construct signal pdf
   // 定义了信号的概率密度函数，这里有中心值、sigma自变量x一起构造高斯函数
+  // 经常有听到拿“形状”，指的其实就是概率密度函数的形状
   RooRealVar mean("mean","mean",0,-8,8) ;
   RooRealVar sigma("sigma","sigma",0.3,0.1,10) ;
   RooGaussian gx("gx","gx",x,mean,sigma) ;
@@ -148,6 +149,8 @@ void rf501_simultaneouspdf()
   RooChebychev px_ctl("px_ctl","px_ctl",x,RooArgSet(a0_ctl,a1_ctl)) ;
 
   // Construct the composite model
+  // 这里可以看到，不同的“形状”代表了不同的实验分布，分别反映了信号概率密度函数形状，探测器分辨等
+  // 然后将他们“组合”也就是卷积在一起，来表达该物理过程我们想要了解的实验分布
   RooRealVar f_ctl("f_ctl","f_ctl",0.5,0.,1.) ;
   RooAddPdf model_ctl("model_ctl","model_ctl",RooArgList(gx_ctl,px_ctl),f_ctl) ;
 
