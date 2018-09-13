@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>如何用ROOT做联合拟合？</title>
-  <meta name="description" content="如何做联合拟合？首先这里就是应用Roofit的例子(Tutorials)来学习做联合拟合(SimutaneousFit)，这是一个比较常用的东西。这里就试着来看看例子">
+  <meta name="description" content="如何做联合拟合？首先这里就是应用Roofit的例子(Tutorials)来学习做联合拟合(SimutaneousFit)，这是一个比较常用的东西，当利用多个衰变道来寻找共同的共振态时，可能要share一些变量，然后在拟合中可以得到描述该共振态更恰当的变量值。这里就试着来看看例子">
   <meta name="baidu-site-verification" content="CPToBxeC1k"/>
 
   <link rel="canonical" href="https://cuixiaofei.github.io/2018/06/25/method5.html">
@@ -73,7 +73,7 @@
             </header>
             <p><strong>如何做联合拟合？</strong></p>
 
-<p>首先这里就是应用Roofit的例子(Tutorials)来学习做联合拟合(SimutaneousFit)，这是一个比较常用的东西。</p>
+<p>首先这里就是应用Roofit的例子(Tutorials)来学习做联合拟合(SimutaneousFit)，这是一个比较常用的东西，当利用多个衰变道来寻找共同的共振态时，可能要share一些变量，然后在拟合中可以得到描述该共振态更恰当的变量值。</p>
 
 <p>这里就试着来看看例子</p>
 
@@ -245,16 +245,16 @@ void rf501_simultaneouspdf()
 
 <p>首先想到的就是，看一看例子tutorial，所以这里是这样写的来看看如何做联合拟合，还会继续写的实际。</p>
 
-<p>一个是搜索使用的类的定义，在网站这里<a href="https://root.cern.ch/doc/master/annotated.html">ClassIndex</a>搜索ProjWData这个成员，也可以在<a href="https://root.cern.ch/doc/master/annotated.html">ClassList</a>可以用搜索框或者是按类找名字ctrl+f都可以。
+<p>一个是搜索使用的类的定义和继承关系，在网站这里<a href="https://root.cern.ch/doc/master/annotated.html">ClassIndex</a>搜索ProjWData这个成员，也可以在<a href="https://root.cern.ch/doc/master/annotated.html">ClassList</a>可以用搜索框或者是按类找名字ctrl+f都可以。
 可以看到，其定义有两个如下：</p>
 
-<p>第一个定义可以看出，其可有两个变量，一是数据集RooDataSet(RooAbsData三个成员中的一个)，如下图，第二个可能用于分bin的问题，<img src="/assets/img/RooAbsData.png" alt="" /></p>
+<p>第一个定义可以看出，其可有两个变量，一是数据集RooDataSet(RooAbsData三个成员中的一个)，从下面的继承图可以清楚地了解到程序的调用关系，第二个可能用于分bin的问题，<img src="/assets/img/RooAbsData.png" alt="" /></p>
 <pre><code>RooFit::ProjWData  ( const RooAbsData &amp; projData,
 Bool_t  binData = kFALSE
 )
 </code></pre>
 
-<p>从这里上下两个定义可以看出，ROOT软件包整体内部命名是十分规范的，我们在使用的时候也要尽量把变量函数名写的清楚易懂有一定的规范。如BES合作组的BOSS分析环境，可以查看BOSS定义的基本类<a href="http://bes3.to.infn.it/Boss/7.0.2/html/classes.html">BOSS Class Reference Documentation</a>，这里可以清楚看到很多分析中使用的内容。当然，如果有较为统一的规范是不容易的，因为在传统研究中各种不同群体都有可能产生各自内部的“独特语言系统”。</p>
+<p>从这里上下两个定义可以看出，ROOT软件包整体内部命名是十分规范的，我们在使用的时候也要尽量把变量函数名写的清楚易懂有一定的规范。如BES合作组的BOSS分析环境，可以查看BOSS定义的基本的类和继承图<a href="http://bes3.to.infn.it/Boss/7.0.2/html/classes.html">BOSS Class Reference Documentation</a>，这里可以清楚看到很多分析中使用的内容。当然，如果有较为统一的规范是不容易的，因为在传统研究中各种不同群体都有可能产生各自内部的“独特语言系统”。</p>
 
 <p>第二个定义可以看出，其可有三个变量，一是从数据集里取数据的方法(RooCategory是其中一个)，第二个见上，第三个可能用于分bin的问题</p>
 <pre><code>RooFit::ProjWData  ( const RooArgSet &amp; projSet,
@@ -266,7 +266,7 @@ Bool_t binData = kFALSE
 <p>可以看出我们这里使用了两次，一次第一个定义，一次第二个定义，并且没有用bin变量。
 这样我们通过查看这些的定义关系，有助于梳理清楚他们的调用关系，用起来就不会发怵。
 所谓计算机程序就是一大堆的相互调用，从ifelse编译一直调用到逻辑门基本不会出错，如果出现问题，就查看定义看哪里调用跑丢了，如果能够解决好把调用的类型放对了，一般程序都能正常运行，就像喂小猫一样。
-如果想要训练一下编程时候的脑子，其实有清晰一点的编程比如说用G语言LabVIEW，你可以看数据流，并且简单的编程结构也比较直观，实际应用也比较广泛，比如BESIII值班室的用户界面系统，可以看到很多都是使用LabVIEW编的。另外甚至可以通过一些软件也能训练，如<a href="http://www.zachtronics.com">Zachronic</a>公司旗下的软件都很硬核，还有辅助学习各种编程语言的网站<a href="www.codingame.com">酷代码</a>非常有趣，很全各种计算机语言都能找到。</p>
+如果想要训练一下编程时候的脑子，其实有更直观一点的编程比如说用G语言LabVIEW，你可以看数据流，并且简单的编程结构也比较直观，实际应用也比较广泛，比如BESIII值班室的用户界面系统，可以看到很多都是使用LabVIEW编的。另外甚至可以通过一些软件也能训练，如<a href="http://www.zachtronics.com">Zachronic</a>公司旗下的软件都很硬核，还有辅助学习各种编程语言的网站<a href="www.codingame.com">酷代码</a>非常有趣，很全各种计算机语言都能找到。</p>
 
 <p>可以在网上<a href="https://root-forum.cern.ch">ROOT Forum</a>看别人遇到了什么问题，如果身边没人也可以试着问，还可以看看同行都在关心什么问题？
 这里提供一个问问题模板<a href="https://root-forum.cern.ch/t/how-to-automatically-generate-classes-code/4667">参考</a>:</p>
