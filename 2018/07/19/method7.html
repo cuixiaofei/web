@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>试做名词解释</title>
-  <meta name="description" content="这里试着对一些接触到的名词进行了解，避免因为专业词汇产生障碍，当然很多可能理解错误随着学习会再修改。这里绝不做科普，所以可能需要数学描述和公式的展示，或者易于了解的参考文献，但是碍于水平依然要之后修改。      了解什么是轻子普适性?Lepton        了解什么是R值?        了解什么是MCtr...">
+  <meta name="description" content="这里试着对一些接触到的名词进行了解，避免因为专业词汇产生障碍，当然很多可能理解错误随着学习会再修改。这里绝不做科普，所以可能需要数学描述和公式的展示，或者易于了解的参考文献，但是碍于水平依然要之后修改。最近刚刚配置兼容了公式。      连续区？共振区?原子核反应理论？        词源分析: Topology...">
   <meta name="baidu-site-verification" content="CPToBxeC1k"/>
 
   <link rel="canonical" href="https://cuixiaofei.github.io/2018/07/19/method7.html">
@@ -30,6 +30,33 @@
   <script src="assets/js/html5shiv.min.js"></script>
   <script src="assets/js/respond.min.js"></script>
   <![endif]-->
+  
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'"
+                }
+            },
+            showProcessingMessages: false
+        });
+</script>
+
 
 </head>
 
@@ -64,18 +91,50 @@
             <header>
                 <h1 class="article-title">试做名词解释</h1>
                 <p class="article-time">
-                    2018年07月19日 星期四,  发表于 <span>北京</span>
+                    2018年12月22日 星期四,  发表于 <span>北京</span>
                 </p>
                 <p class="article-hint">
                     如果你对本小站有任何的建议或者疑问, 可以在
                     <a href="https://github.com/cuixiaofei/web/issues" target="_blank">提交Issues</a>, 谢谢! :)
                 </p>
             </header>
-            <p>这里试着对一些接触到的名词进行了解，避免因为专业词汇产生障碍，当然很多可能理解错误随着学习会再修改。这里绝不做科普，所以可能需要数学描述和公式的展示，或者易于了解的参考文献，但是碍于水平依然要之后修改。</p>
+            <p>这里试着对一些接触到的名词进行了解，避免因为专业词汇产生障碍，当然很多可能理解错误随着学习会再修改。这里绝不做科普，所以可能需要数学描述和公式的展示，或者易于了解的参考文献，但是碍于水平依然要之后修改。最近刚刚配置兼容了公式。</p>
 
 <blockquote>
   <ul>
-    <li>了解什么是轻子普适性?Lepton</li>
+    <li>连续区？共振区?原子核反应理论？</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>词源分析: Topology?
+拓扑topo一词的词源是“处所”的概念[希腊空间概念的发展]，后来发展为“空间”，而在数学中由于对空间的研究引申为“几何”，在对几何的分析中发现需要对几何进行刻画又有了“分类”的意思。计算机常用该词来描述网络的连接和分布情况。至于为何高能物理实验中对衰变道的描述要使用这词，首先想到的是分类的概念，即对粒子的衰变情况进行分类，而至于是否有说明衰变前后双方的数学空间有在连续的变换下不变的性质，我想也是有可能的。</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>了解什么是龙格库塔方法?
+可能是数值计算偏微分方程的一个算法，经过共形变换霍夫变换后，可用来帮助径迹拟合，得到更精确的结果。</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>了解什么是龙格楞次矢量?</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>了解什么是Hough transform？霍夫变换</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>了解什么是轻子普适性?Lepton universal</li>
   </ul>
 </blockquote>
 
@@ -93,11 +152,12 @@
 
 <blockquote>
   <ul>
-    <li>了解什么是Double Counting? 什么是Crossover Background?</li>
+    <li>了解什么是Double Counting? 什么是Crossover概念?</li>
   </ul>
 </blockquote>
 
-<p>Double Counting 从名字上看就是数了两次，当产生两个不同的ExclusiveMC时，虽然看起来是不相同的物理衰变过程，但是如果其中的衰变有交叉的物理过程，则可能重复数了一次，这时我们要想办法减少一次以便和物理符合。Crossover Background 有些类似，当研究两个不同的衰变时，由于这两个衰变之间有共轭的关系，则有可能一个衰变成为另一个衰变的本底，这个时候可以使用其中一个衰变的MC来对另一个过程进行检验，如出现峰值背景则有可能出现了交叉本底的情况。</p>
+<p>Double Counting 从名字上看就是数了两次，当产生两个不同的ExclusiveMC时，虽然看起来是不相同的物理衰变过程，但是如果其中的衰变有交叉的物理过程，则可能重复数了一次，这时我们要想办法减少一次以便和物理符合。
+(之前的错误理解)Crossover Background 有些类似，当研究两个不同的衰变时，由于这两个衰变之间有共轭的关系，则有可能一个衰变成为另一个衰变的本底，这个时候可以使用其中一个衰变的MC来对另一个过程进行检验，如出现峰值背景则有可能出现了交叉本底的情况。</p>
 
 <blockquote>
   <ul>
@@ -105,9 +165,9 @@
   </ul>
 </blockquote>
 
-<p>这个名字起的很有意思，这里来看看。首先这个是在粲偶素(charmonium)物理中常用的名词，这里的Charm指粲夸克(c)，这两个名字指代不同的能区，能区的分界线由能区的衰变产物所描述，也就是D介子，D介子是携带粲夸克的最轻粒子，在此能区之上将会可能产生由粲夸克参与构成的粒子如可衰变为DDbar，在此能区之下所产生的粒子则难以包括粲夸克(DDbar产生不了了)。这个名字起的非常有趣，过度解读一下，可能是由于我们不知道这粲夸克去哪了所以我们说它藏起来了(Hidden)，能量转化竟然变成其他。</p>
+<p>这个名字起的很有意思，这里来看看。首先这个是在粲物理中常用的名词，这里的Charm指粲夸克(c)，这两个名字指代不同的能区，能区的分界线由该能区粒子的衰变产物所描述，也就是D介子，D介子是携带粲夸克的最轻粒子，在此能区之上将会可能产生由粲夸克参与构成的粒子如可衰变为DDbar，在此能区之下所产生的粒子则难以包括粲夸克(DDbar产生不了了)，并且两个能区的衰变道不同是分开的。这个名字起的非常有趣，过度解读一下，可能是由于我们不知道这粲夸克去哪了所以我们说它藏起来了(Hidden)，能量转化竟然变成其他的夸克。当然我们现在知道并不一定如此，也有前述的能量阈值之上的粒子与之下的衰变发生较强的耦合，这种粒子我们称之为奇特态(exotic state)。</p>
 
-<p>由此推想，还可以继续起名字，即Open Bottom，Hidden Bottom。在b偶素(bottomium)物理中，存在同样的特殊的衰变产物，Upsilon介子，是携带b夸克的最轻的粒子，那么我们可以称可以产生Upsilon介子的能区为Open Bottom，能区之下难以产生则称之为Hidden Bottom。这里我们还可以注意的是，首次观测到的b夸克物质就是Upsilon介子，而首次观测到的粲夸克物质是J/psi粒子而不是D介子？这是为什么？</p>
+<p>由此推想，还可以继续起名字，即Open Bottom，Hidden Bottom。在B物理中，存在同样的特殊的衰变产物，Upsilon介子，是携带b夸克的最轻的粒子，那么我们可以称可以产生Upsilon介子的能区为Open Bottom，能区之下难以产生则称之为Hidden Bottom。这里我们还可以注意的是，首次观测到的b夸克物质就是Upsilon介子，而首次观测到的粲夸克物质是J/psi粒子而不是D介子，这是由于D介子多由$D D\bar$能区产生，该能区高于J/psi粒子产生的能区，因而首次发现的含粲夸克的粒子即为J/psi粒子。</p>
 
 <blockquote>
   <ul>
@@ -115,7 +175,7 @@
   </ul>
 </blockquote>
 
-<p>两个都是指粒子物理实验常用的随机模拟方法，其中Full Simulation非常厉害，基本上在建造实验装置前可以用它来进行很全面的模拟，可以对实验目标的可行性和设计方案给出一定的评估。原因就是，这个Full说明了它在进行模拟时，可以构造探测器的几何结构还可以配置其中的物质成分，当实验发生时可以用构造一个模拟系统，来利用现有的相互作用理论模拟其中的粒子发生相互作用的一些基本过程，由于还可以考虑几何结构，就可以对实验设计的具体情况进行调整和评估。</p>
+<p>两个都是指粒子物理实验常用的随机模拟方法，其中Full Simulation非常厉害，基本上在建造实验装置前可以用它来进行很全面的模拟，可以对实验目标的可行性和设计方案给出一定的评估。原因就是，这个Full说明了它在进行模拟时，可以构造探测器的几何结构还可以配置其中的物质成分，当实验发生时可以用构造一个模拟系统，来利用现有的相互作用理论模拟其中的粒子发生相互作用的一些基本过程，可以考虑几何结构，就可以对实验设计的具体情况进行调整和评估。在探测器运行阶段，则如可以使用Geant4[https://linkinghub.elsevier.com/retrieve/pii/S0168900203013688]通过模拟来估计探测器响应，现在似乎已经出来Geant5了。</p>
 
 <p>Fast Simulation，就是仅仅考虑了实验可能得到的结果，基于ROOT的TGenPhaseSpace来做简单的相空间模拟，对于探测器结构也基本用ROOT就可以做出，然后物理特性用Smear的方法，对预计的物理分布进行展宽，这样模拟考虑的没有Full那样全面，只能看看可行性，只用相空间产生的话有些实验可能不够，只是进行粗略的估计。
 当然其实这是做模拟的才明白，自己是做数据分析仅做了解。</p>
@@ -140,7 +200,7 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-md-12">
-                Copyright &copy; 2018 崔小非 - All rights reserved.
+              Copyright &copy; 2018 崔小非 - All rights based on <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>.
             </div>
         </div>
     </div>

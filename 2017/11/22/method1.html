@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>文件修改忘记改了什么怎么办?使用git</title>
-  <meta name="description" content="这里主要就是解决第1个问题: 在平时凡是用到编程的时候，任何人都易犯错，那么如何看出一个文件我们改了什么?什么时候改的？最快的方法是用man命令，每个命令，都有人写好了标准的使用手册就用man命令，也可以看下面的写的细了。">
+  <meta name="description" content="“你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”这里主要就是解决第1个问题: 在平时凡是用到编程的时候，任何人都易犯错，那么如何看出一个文件我们改了什么?什么时候改的？最快的方法是用man命令，每个命令，都有人写好了标准的使用手册就用man命令，也可以看下面的写的细了。">
   <meta name="baidu-site-verification" content="CPToBxeC1k"/>
 
   <link rel="canonical" href="https://cuixiaofei.github.io/2017/11/22/method1.html">
@@ -30,6 +30,33 @@
   <script src="assets/js/html5shiv.min.js"></script>
   <script src="assets/js/respond.min.js"></script>
   <![endif]-->
+  
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'"
+                }
+            },
+            showProcessingMessages: false
+        });
+</script>
+
 
 </head>
 
@@ -71,7 +98,9 @@
                     <a href="https://github.com/cuixiaofei/web/issues" target="_blank">提交Issues</a>, 谢谢! :)
                 </p>
             </header>
-            <p>这里主要就是解决第1个问题: 在平时凡是用到编程的时候，任何人都易犯错，那么如何看出一个文件我们改了什么?什么时候改的？</p>
+            <p><em>“你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”</em></p>
+
+<p>这里主要就是解决第1个问题: 在平时凡是用到编程的时候，任何人都易犯错，那么如何看出一个文件我们改了什么?什么时候改的？</p>
 
 <p>最快的方法是用man命令，每个命令，都有人写好了标准的使用手册就用man命令，也可以看下面的写的细了。</p>
 <pre><code>$ man git
@@ -157,7 +186,7 @@ $ git diff //即可显示修改了什么，会有++,--这样的符号也就是�
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-md-12">
-                Copyright &copy; 2018 崔小非 - All rights reserved.
+              Copyright &copy; 2018 崔小非 - All rights based on <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>.
             </div>
         </div>
     </div>

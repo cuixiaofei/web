@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>开放研究之所以可能(二)</title>
+  <meta name="description" content="(引言)以下全文所讨论的错误系统其名字容易给人产生误导，晚上和同学聊天的过程中，同学指出逻辑上构建的系统并不是隐含着错误，而是逻辑系统本身是没有错误的，这种系统的描述可能无法完备，所以这里其实应将错误系统名字修改一下，为冗余系统。这是一个恰当的名字，但是由于下面内容均参考了[错误系统]一书，所以尊重作者以下依然成...">
+  <meta name="baidu-site-verification" content="CPToBxeC1k"/>
+
+  <link rel="canonical" href="https://cuixiaofei.github.io/2018/11/16/OR5.html">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/blog.css">
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="/assets/css/icard_resume.css"> -->
+
+  <link rel="icon" type="image/png" href="/assets/img/avatar.JPG">
+
+  <!-- Google fonts -->
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300' type='text/css'>
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css'>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.min.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+  
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'"
+                }
+            },
+            showProcessingMessages: false
+        });
+</script>
+
+
+</head>
+
+    <body>
+        <header class="bloghead">
+    <dev class="authorheader">
+      <a href="">
+            <img alt="My Avatar" src="/assets/img/avatar.JPG"/>
+        </a>
+        <dev class="blogtitle">
+          <h1><a href="">Xiaofei</a></h1>
+            <h5> 奇妙发现世界～～ </h5>
+        </dev>
+    </dev>
+
+    <nav class="menu" role="nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+            <li>|</li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li>|</li>
+            <!-- 修改 -->
+            <li><a target="_blank" href="https://github.com/cuixiaofei/web">Github</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="/about.html"> About Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <main class="blogmain">
+            <header>
+                <h1 class="article-title">开放研究之所以可能(二)</h1>
+                <p class="article-time">
+                    2018年10月31日 星期三,  发表于 <span>北京</span>
+                </p>
+                <p class="article-hint">
+                    如果你对本小站有任何的建议或者疑问, 可以在
+                    <a href="https://github.com/cuixiaofei/web/issues" target="_blank">提交Issues</a>, 谢谢! :)
+                </p>
+            </header>
+            <p>(引言)以下全文所讨论的错误系统其名字容易给人产生误导，晚上和同学聊天的过程中，同学指出逻辑上构建的系统并不是隐含着错误，而是逻辑系统本身是没有错误的，这种系统的描述可能无法完备，所以这里其实应将错误系统名字修改一下，为冗余系统。这是一个恰当的名字，但是由于下面内容均参考了[错误系统]一书，所以尊重作者以下依然成为错误系统，当然其实并没有什么错，而是有一些发展的可能，即冗余。</p>
+
+<p>为了更好地了解和思考开放研究的可能性，这里引入一些概念来进行讨论，对科学研究过程中出现的一些问题进行所谓消避错，并且重新讨论消避错过程中的可信任问题。</p>
+
+<p>一、错误存在的判别规则和变动规律</p>
+
+<p>1.定义与描述</p>
+
+<p><strong>定义1.1</strong>  设 
+<script type="math/tex">S=[S_{0},S_{1}]</script>,<script type="math/tex">K=\left \{ (x,y,z) | a \leqslant x \leqslant b, c\leqslant y \leqslant d, e\leqslant z \leqslant f \right \}</script>,<script type="math/tex">Z=\left \{ z_{1},z_{2},,z_{n}\right \}</script>,<script type="math/tex">M=\left \{m_{1},m_{2},,m_{i}\right \}</script>,其中S是一个时间集，K是空间集，Z是专业组成的集，M是目的集. 显然，开放研究的发展是时间的函数.</p>
+
+<p><strong>定义1.2</strong>  这里定义规则，设G是一组规则,<script type="math/tex">D=S*Z*M*K</script>,若映射<script type="math/tex">f:D\rightarrow G</script>,则称f是错误判别规则函,简称规则函数,记为,
+  <script type="math/tex">G=f(D), G=f(s,k,z,m), G=G(s,k,z,m).</script>
+  规则函数的理解:</p>
+
+<p>a.<script type="math/tex">G=f(s,k_{0},z_{0},m_{0})=f(s).</script>解释为,空间和领域和目的一定时,规则仅为时间的函数.</p>
+
+<p>b.<script type="math/tex">G=f(s_{0},k,z_{0},m_{0})=f(k).</script>解释为,时间和领域和目的一定时,规则仅为空间的函数.</p>
+
+<p>c.<script type="math/tex">G=f(s_{0},k_{0},z_{0},m_{0})=f(k).</script>解释为常数规则记为<script type="math/tex">G=G_{0}</script>.</p>
+
+<p><strong>定义1.3</strong>    义规则函数的运算律,有<script type="math/tex">G_{1}-G_{2}, G_{1}\wedge G_{2}, G_{1}\vee G_{2}</script></p>
+
+<p><strong>定义1.4</strong>    定义规则函数的交互作用,设<script type="math/tex">G_{1}</script>和<script type="math/tex">G_{2}</script>的论域分别为<script type="math/tex">U_{1}</script>和<script type="math/tex">U_{2}</script>,<script type="math/tex">U_{3}=U_{1}\vee U_{2}</script>,G3是U3上规则函数,且有<script type="math/tex">G_{3}=G_{1} \vee G_{2}</script>,若<script type="math/tex">\forall a \in U_{3}</script>且对<script type="math/tex">G_{1},G_{2},G_{3}</script>有错误值z1,z2,z3且<script type="math/tex">z_{3}=min[z_{1},z_{2}]</script>,则称G1与G2对于论U3是无错误交互作用,否则有交互作用.</p>
+
+<p><strong>定义1.5</strong>   若p是一个命题,则称<script type="math/tex">\bar{p}</script>称为p的非,记为-p,若对规则<script type="math/tex">G_{1}={g_{1},g_{2},...,g_{n}}有G_{2}={-g_{1},-g_{2},...,-g_{n}}</script>,则记 <script type="math/tex">G_{2}=-G_{1}</script>.</p>
+
+<p><strong>命题1.1</strong>   规则的负满足<script type="math/tex">-(-G)=G</script>,由此规则可以得到自由<script type="math/tex">L=G+(-G)</script>.其实我们这里可以定义<script type="math/tex">0=L</script>.</p>
+
+<p><strong>定义1.6</strong>   设G是U上一组无错误规则,若<script type="math/tex">\forall a \in U</script>,a对于G的错误值是t,而对于U上任意一组无错误规则Gi的值是ti,且均有<script type="math/tex">t\leqslant t_{i}</script>成立,则称G是U上一组完备规则,记为<script type="math/tex">\omega U(G)</script>. 对这样的一组完备规则G,可称之为论域U上有资格的规则.</p>
+
+<p><strong>定义1.7</strong>   首先这里定义错误判别规则的等价,若有<script type="math/tex">G_{1}\leftarrow G_{2}, G_{1}\rightarrow G_{2}</script>,则称G1与G2等价记作G1~G2.接上,若有两等价规则,且G1是G2的真子集,则G1优于G2,可以记作<script type="math/tex">G_{1}>G_{2}</script>. 在论域U中,若G1在U上完备,G2在U上不完备,则G1优于G2,还有如果G1比G2更容易实施,则G1优于G2.</p>
+
+<p>2.错误判别规则的建立或识别错误的模式.</p>
+
+<p>二、错误系统的基本结构和特点
+1.基本特点
+层次等级性和多侧面性,也就是说错误系统中研究的对象是有层次有等级,反映出随着问题探讨的深度与方面,会呈现出不同的等级,反映出不同的侧面,像洋葱一样.
+2.错误系统的基本结构及拓铺
+串联型与连锁性
+并联型与扩缩性
+反馈型与循环性
+蕴含型与中心性</p>
+
+<p>3.系统的基本分类
+整体错误系统
+因果错误系统
+错误系统的独立与联系
+循环错误</p>
+
+<p>三、消避错的基本形式
+错误系统的结构变换</p>
+
+<p>要素与打断
+产生与消除
+置换与增加</p>
+
+<p>四、可信任问题的讨论
+论域与规则的变换</p>
+
+<p>可信任问题的论域与规则</p>
+
+<p>五、可计算与示例
+简单问题的计算与示例</p>
+
+<p><em>以上内容参考自《错误系统》(郭开仲著)</em></p>
+
+<div><table align="right"><td align="right" bgcolor="#FFFFFF" width="200"><font color="#F0F0F0">~~未完待续~~</font></td></table><br />
+<table align="right"><td align="right" bgcolor="#F5F5F5" width="300"><font color="#000000">-------开放研究之所以可能</font></td></table></div>
+
+
+            <footer class="article-footer">
+    <div class="authorimage">
+      <img src="/assets/img/avatar.JPG" alt="My Avatar" class="img-circle">
+    </div>
+    <section class="author">
+      <h4><a href="/about.html">小非</a></h4>
+        <a href="mailto:cui_xiaofei@163.com">cui_xiaofei@163.com</a>
+    </section>
+</footer>
+
+        </main>
+
+        <div class="footer-copyright">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+              Copyright &copy; 2018 崔小非 - All rights based on <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>.
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74743250-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    </body>
+
+</html>

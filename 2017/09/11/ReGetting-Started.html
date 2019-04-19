@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>开始篇</title>
-  <meta name="description" content="小站的第一篇博客:本博客改编自https://liungkejin.github.io, 感谢梁窠金的个人博客带我入门。小站源代码进行了优化，应该比梁窠金更加的更加容易移植，只需要修改名字和地址就可以重新移植，正在修改中敬请期待～～借鉴的博文: 阮一峰，garfielder007，雨知。当然STFW亦可。小站所有...">
+  <meta name="description" content="小站的简介:本博客改编自https://liungkejin.github.io, 感谢梁窠金的个人博客带我入门。小站源代码进行了优化，会变得更加容易移植，只需要修改名字和一些变量就可以重新移植，修改后将存放于github账户中，正在修改中敬请期待～～小站使用jekyll还有bootstrap搭建!个人页面应用了...">
   <meta name="baidu-site-verification" content="CPToBxeC1k"/>
 
   <link rel="canonical" href="https://cuixiaofei.github.io/2017/09/11/ReGetting-Started.html">
@@ -30,6 +30,33 @@
   <script src="assets/js/html5shiv.min.js"></script>
   <script src="assets/js/respond.min.js"></script>
   <![endif]-->
+  
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'"
+                }
+            },
+            showProcessingMessages: false
+        });
+</script>
+
 
 </head>
 
@@ -64,30 +91,28 @@
             <header>
                 <h1 class="article-title">开始篇</h1>
                 <p class="article-time">
-                    2017年09月11日 星期一,  发表于 <span>天津</span>
+                    2018年12月10日 星期一,  发表于 <span>天津</span>
                 </p>
                 <p class="article-hint">
                     如果你对本小站有任何的建议或者疑问, 可以在
                     <a href="https://github.com/cuixiaofei/web/issues" target="_blank">提交Issues</a>, 谢谢! :)
                 </p>
             </header>
-            <p><strong>小站的第一篇博客</strong>:</p>
+            <p><strong>小站的简介</strong>:</p>
 
-<p>本博客改编自https://liungkejin.github.io, 感谢<a href="https://github.com/liungkejin/liungkejin.github.io">梁窠金的个人博客</a>带我入门。<br />
-小站源代码进行了优化，应该比梁窠金更加的更加容易移植，只需要修改名字和地址就可以重新移植，正在修改中敬请期待～～</p>
+<p>本博客改编自https://liungkejin.github.io, 感谢<a href="https://github.com/liungkejin/liungkejin.github.io">梁窠金的个人博客</a>带我入门。</p>
 
-<p>借鉴的博文: <a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">阮一峰</a>，<a href="https://blog.csdn.net/garfielder007/article/details/49992713">garfielder007</a>，<a href="https://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html">雨知</a>。当然STFW亦可。</p>
-
-<p>小站所有的文章都将会选用<a href="https://creativecommons.org/licenses/">CCBY</a>协议，当然还没有搞清楚所以要一些时间。</p>
+<p>小站源代码进行了优化，会变得更加容易移植，只需要修改名字和一些变量就可以重新移植，修改后将存放于github账户中，正在修改中敬请期待～～</p>
 
 <p>小站使用<a href="http://jekyll.bootcss.com/">jekyll</a>还有<a href="http://v3.bootcss.com">bootstrap</a>搭建!个人页面应用了 <a href="http://ddbullfrog.github.io/resumecard/">resumecard</a>项目!</p>
 
-<p>同时和粱窠金一样也要感谢<a href="http://www.monkeysnatchbanana.com/">Monkey Snatch Banana</a> 博客，模板是人家的。</p>
+<p>同时和粱窠金一样也要感谢<a href="http://www.monkeysnatchbanana.com/">Monkey Snatch Banana</a> 博客，模板是人家的。其他模板将来可能会更新使用。</p>
 
-<p>gitpage类似的主要写东西比较简洁直接进行表述，可以参考如<a href="https://yifan92.github.io">HEP note</a>，如<a href="http://www.yinwang.org/">王垠博客</a></p>
+<p>gitpage类似的主要写东西比较简洁直接进行表述，可以参考如<a href="https://yifan92.github.io">HEP note</a>，如<a href="http://www.yinwang.org/">王垠博客</a>。借鉴的博文还有: <a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">阮一峰</a>，<a href="https://blog.csdn.net/garfielder007/article/details/49992713">garfielder007</a>，<a href="https://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html">雨知</a>，也可以上<a href="https://www.v2ex.com/?r=cuixf">V站</a>看看。当然STFW亦可。</p>
+
+<p>小站现已更新，内容基本选用<a href="https://creativecommons.org/licenses/">CC-BY-SA</a>协议，这一协议保证了本博客内容的版权。小站文档分为建档和更新档，建档与更新档不同，网站中直接看到的是更新时间(每篇文字独立更新!!!，找找更新了什么?)，而建档时间在网页源码中查看，建档和修改历史需到github查看。</p>
 
 <p>感谢 <a href="https://github.com">github</a> 提供的 Github Pages 功能!</p>
-
 
             <footer class="article-footer">
     <div class="authorimage">
@@ -105,7 +130,7 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-md-12">
-                Copyright &copy; 2018 崔小非 - All rights reserved.
+              Copyright &copy; 2018 崔小非 - All rights based on <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>.
             </div>
         </div>
     </div>
