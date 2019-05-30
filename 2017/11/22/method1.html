@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>文件修改忘记改了什么怎么办?使用git</title>
-  <meta name="description" content="“你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”这里主要就是解决第1个问题: 在平时凡是用到编程的时候，任何人都易犯错，那么如何看出一个文件我们改了什么?什么时候改的？最快的方法是用man命令，每个命令，都有人写好了标准的使用手册就用man命令，也可以看下面的写的细了。">
+  <meta name="description" content="”—-你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”这里主要就是解决1个问题: 在平时凡是用到文本的时候，任何人都易犯错，那么如何看出一个文件我们改了什么?什么时候改的？最快的方法是用man命令，每个命令，都有人写好了标准的使用手册就用man命令，还可以上网查阅相关资料，如高能所计算环境...">
   <meta name="baidu-site-verification" content="CPToBxeC1k"/>
 
   <link rel="canonical" href="https://cuixiaofei.github.io/2017/11/22/method1.html">
@@ -91,18 +91,18 @@
             <header>
                 <h1 class="article-title">文件修改忘记改了什么怎么办?使用git</h1>
                 <p class="article-time">
-                    2017年11月22日 星期二,  发表于 <span>北京</span>
+                    2019年05月30日 星期二,  发表于 <span>北京</span>
                 </p>
                 <p class="article-hint">
                     如果你对本小站有任何的建议或者疑问, 可以在
                     <a href="https://github.com/cuixiaofei/web/issues" target="_blank">提交Issues</a>, 谢谢! :)
                 </p>
             </header>
-            <p><em>“你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”</em></p>
+            <p><em>”—-你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”</em></p>
 
-<p>这里主要就是解决第1个问题: 在平时凡是用到编程的时候，任何人都易犯错，那么如何看出一个文件我们改了什么?什么时候改的？</p>
+<p>这里主要就是解决1个问题: 在平时凡是用到文本的时候，任何人都易犯错，那么如何看出一个文件我们改了什么?什么时候改的？</p>
 
-<p>最快的方法是用man命令，每个命令，都有人写好了标准的使用手册就用man命令，也可以看下面的写的细了。</p>
+<p>最快的方法是用man命令，每个命令，都有人写好了标准的使用手册就用man命令，还可以上网查阅相关资料，如<a href="http://afsapply.ihep.ac.cn/cchelp/zh/">高能所计算环境使用手册</a>，现在STFW是十分方便的，也可以看下面的写的细了。</p>
 <pre><code>$ man git
 </code></pre>
 <p>这里介绍git的基本用法，另外还有github,gitpage,gitbook和其对应的国产软件将在之后再写写看。这是程序员们使用的基本工具，Linus发起的版本控制软件，只学学最简单的直接用。</p>
@@ -160,14 +160,17 @@ $ git diff //即可显示修改了什么，会有++,--这样的符号也就是�
 <pre><code>$git clone/push/pull
 </code></pre>
 
-<p>继续学习，可以看看多分支branch(git merge/rebase)，看看回滚(git reset/revert/checkout)，看看远程管理(git remote/tag)等等</p>
+<p>继续学习，可以看看多分支branch(git merge/rebase)，看看回滚(git reset/revert/checkout)，看看远程管理(git remote/tag)等等。</p>
 
-<p>这些虽然说净是些程序员的东西，但是既然目前计算机科学做的很好，自由软件运动思想也很超前影响力很大，那么了解一下也是很好的。看纪录片<a href="https://www.bilibili.com/video/av9512574/">操作系统革命</a>，很有意思，就是讲买了电脑如果受限win这样的操作系统，那么电脑就是租的，随时有可能用不了了，所以自由软件运动让买了电脑的人可以真正拥有。现在的开放研究运动其实也一定程度上受到自由软件运动的启发。</p>
+<p>这些虽然说净是些程序员的东西，但是既然目前计算机科学做的很好，自由软件运动思想也很超前影响力很大，那么了解一下也是很好的。看纪录片<a href="https://www.bilibili.com/video/av9512574/">操作系统革命</a>，很有意思，就是讲买了电脑如果受限win这样的操作系统，那么电脑就是租的，随时有可能用不了了，所以自由软件运动让买了电脑的人可以真正拥有。现在的开放研究运动其实也在很大程度上受到自由软件运动的启发。</p>
 
-<p>当然物理学在开放研究方面一直做的都比较好，处在前沿位置<a href="https://scoap3.org/what-is-scoap3/">SCOAP</a>，发展劲头一直都在继续<a href="https://theconversation.com/how-the-insights-of-the-large-hadron-collider-are-being-made-open-to-everyone-70283">How the insights of the Large Hadron Collider are being made open to everyone</a>，未来的物理学发展可能超乎我们现在的想象。开放研究之所以可能。</p>
+<p>当然物理学在开放研究方面一直做的都比较好，处在前沿位置<a href="https://scoap3.org/what-is-scoap3/">SCOAP</a>，发展劲头一直都在继续<a href="https://theconversation.com/how-the-insights-of-the-large-hadron-collider-are-being-made-open-to-everyone-70283">How the insights of the Large Hadron Collider are being made open to everyone</a>，未来的物理学发展可能超乎我们现在的想象。</p>
 
 <p>参考1:<a href="http://www.cnblogs.com/wilber2013/category/643754.html">Git Step by Step</a>
 参考2:<a href="http://www.cnblogs.com/xiaoya901109/">IronMan</a></p>
+
+<div><table align="right"><td align="right" bgcolor="#FFFFFF" width="100"><font color="#F0F0F0">~~继续思考~~</font></td></table><br />
+<table align="right"><td align="right" bgcolor="#F5F5F5" width="300"><font color="#000000">-------开放研究之所以可能</font></td></table></div>
 
 
             <footer class="article-footer">
