@@ -1,8 +1,0 @@
-[
-  {
-    "id": "webhook-deploy",
-    "execute-command": "/var/scripts/whdeploy.sh",
-    "command-working-directory": "/var/webhook"
-  }
-        
-]
