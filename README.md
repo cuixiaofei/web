@@ -2,4 +2,4 @@
 
 > 持续更新
 
-![Blog](/web/assets/img/jietu.png)
+[Blog](/web/assets/img/jietu.png)
