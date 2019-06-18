@@ -268,17 +268,20 @@ void rf501_simultaneouspdf()
 
 <p>其他的当然也是类似，是计算机帮我们完成了这些操作，当然如涉及到其背后是如何工作的则要继续了解simultaneous背后的数学是如何工作的，比如具体的误差它是如何计算的？整体上参数是如何传递，计算是如何迭代的?编程?不存在的，可以放后去了解。这也学就是我们称之为脚本的原因吧，之所以使用脚本文件，就是相应的程序包提供了简易的借口，可以对应用的用户功能进行自定义。那么有没有办法不写这么多字呢好头大啊？有的，有的人用Python来自动写脚本，有的人直接用PyROOT。</p>
 
-<p><strong>使用Vim</strong>
-如何使用vim?这个实际上吧vim的手册简单看一下，然后了解一下计算机发展过程中文本这个概念是如何发展的，就可以更好地使用vim，我自己在两年用了杨振伟老师推荐的一个简单的vimrc文件<a href="http://easwy.com/">易水博客</a>，还有重新编译了vim用来安装了<a href="https://github.com/cuixiaofei/vim-snippets">vim-snippets</a>后，再没有怎么搞过了，我想snippets应该已经功能很强大了。
+<p><strong>使用Vim</strong></p>
+
+<p>如何使用vim?</p>
+
+<p>这个实际上吧vim的手册简单看一下，然后了解一下计算机发展过程，“文本”这个概念是如何发展的，就可以更好地使用vim，我自己在两年用了杨振伟老师推荐的一个简单的vimrc文件<a href="http://easwy.com/">易水博客</a>，还有重新编译了vim用来安装了<a href="https://github.com/cuixiaofei/vim-snippets">vim-snippets</a>后，再没有怎么搞过了，我想snippets应该已经功能很强大了。
 想起来第一次用vim其实就和我小时候玩游戏一样，上来就键盘挨个按一遍，软件也是，把菜单打开所有按钮按一遍，这就是我从来看任何计算机相关东西的所谓“窍门”。</p>
 
-<p><strong>继续试着学ROOT</strong></p>
+<p><strong>继续试着学ROOT有什么方便的方法？</strong></p>
 
-<p>当然有人教问一下别人，或者有人给脚本，就很快可以用很快可以学会。如果用了之后还要继续学，看别的ROOT经常发生完全看不懂，受到惊吓，我们这里试着想一想办法。</p>
+<p>如果有机会找人教，可以问一下别人，或者有人给脚本，就可以学的很快，因为大家公用的东西都是比较成熟的。在简单用了之后，还要继续学懂一些，或者看到别的ROOT脚本文件有时候发现看不懂，甚至受到了惊吓，下面的一点内容我们试着想一想办法。</p>
 
-<p>首先想到的就是，看一看例子tutorial，所以这里是这样写的来看看如何做联合拟合，还会继续写的实际。</p>
+<p>首先想到的就是，看一看例子tutorial，ROOT官方带有许多的例子，只要稍加更改就可以学到很多东西，上面篇幅中做联合拟合的内容就是依据这样的方式来做的，下面还有。</p>
 
-<p>一个是搜索使用的类的定义和继承关系，在网站这里<a href="https://root.cern.ch/doc/master/annotated.html">ClassIndex</a>搜索ProjWData这个成员，也可以在<a href="https://root.cern.ch/doc/master/annotated.html">ClassList</a>可以用搜索框或者是按类找名字ctrl+f都可以。
+<p>一个是搜索使用的类的定义和继承关系，在网站这里<a href="https://root.cern.ch/doc/master/annotated.html">ClassIndex</a>，比如可以试着搜索ProjWData这个成员，也可以在<a href="https://root.cern.ch/doc/master/annotated.html">ClassList</a>用搜索框或者是按类找名字ctrl+f，这样搜索可以找到ROOT编程的详细内容。
 可以看到，其定义有两个如下：</p>
 
 <p>第一个定义可以看出，其可有两个变量，一是数据集RooDataSet(RooAbsData三个成员中的一个)，从下面的继承图可以清楚地了解到程序的调用关系，第二个可能用于分bin的问题，<img src="/assets/img/RooAbsData.png" alt="" /></p>
