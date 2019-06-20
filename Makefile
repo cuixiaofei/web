@@ -1,7 +1,11 @@
 #------------Makefile Autowork------------
 
+#快速推送命令
 deploy:
 	git add .
-	#git reset --hard 3af5fbf35810043187befbc0ed85e5bd3aded73e
 	git commit -m "update"
 	git push origin gh-pages
+
+show:
+	@echo 'git remote show'
+	git remote get-url --all @echo
