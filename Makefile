@@ -9,5 +9,7 @@ deploy:
 	git push origin gh-pages
 
 show:
-	@echo 'git remote show'
-	git remote get-url --all @echo
+	git remote show > show ;\
+	tempabc='tail show' ;\
+	git remote get-url --all $$tempabc ;\
+	rm show 
