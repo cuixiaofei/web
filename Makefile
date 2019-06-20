@@ -1,5 +1,7 @@
 #------------Makefile Autowork------------
 
+SHELL := /bin/bash
+
 #快速推送命令
 deploy:
 	git add .
