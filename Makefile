@@ -7,6 +7,7 @@ deploy:
 	git add .
 	git commit -m "update"
 	git push origin gh-pages
+	git log
 
 #显示分支
 show:
@@ -20,3 +21,4 @@ showurl:
 #拷贝现有的库
 cloneweb:
 	git clone https://github.com/cuixiaofei/web.git
+
