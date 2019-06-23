@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>文件修改忘记改了什么怎么办?使用git</title>
-  <meta name="description" content="”—-你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”这里主要就是解决1个问题: 在平时凡是用到文本的时候，任何人都易犯错，那么如何看出一个文件我们改了什么?什么时候改的？最快的方法是用man命令，每个命令，都有人写好了标准的使用手册就用man命令，还可以上网查阅相关资料，如高能所计算环境...">
+  <meta name="description" content="”—-你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”这里主要就是解决一个问题: 在平时对纯文本进行编辑时，不论这文本是程序代码还是文字，任何人都容易在编辑时出错，那么如何看出一个文件我们改了什么?什么时候改的？这时就要用到git这个工具，来做一下简单的版本控制。">
   <meta name="baidu-site-verification" content="CPToBxeC1k"/>
 
   <link rel="canonical" href="https://cuixiaofei.github.io/2017/11/22/method1.html">
@@ -91,7 +91,7 @@
             <header>
                 <h1 class="article-title">文件修改忘记改了什么怎么办?使用git</h1>
                 <p class="article-time">
-                    2019年05月30日 星期二,  发表于 <span>北京</span>
+                    2019年06月23日 星期二,  发表于 <span>北京</span>
                 </p>
                 <p class="article-hint">
                     如果你对本小站有任何的建议或者疑问, 可以在
@@ -100,28 +100,30 @@
             </header>
             <p><em>”—-你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”</em></p>
 
-<p>这里主要就是解决1个问题: 在平时凡是用到文本的时候，任何人都易犯错，那么如何看出一个文件我们改了什么?什么时候改的？</p>
+<p>这里主要就是解决一个问题: 在平时对纯文本进行编辑时，不论这文本是程序代码还是文字，任何人都容易在编辑时出错，那么如何看出一个文件我们改了什么?什么时候改的？这时就要用到git这个工具，来做一下简单的版本控制。</p>
 
-<p>最快的方法是用man命令，每个命令，都有人写好了标准的使用手册就用man命令，还可以上网查阅相关资料，如<a href="http://afsapply.ihep.ac.cn/cchelp/zh/">高能所计算环境使用手册</a>，现在STFW是十分方便的，也可以看下面的写的细了。</p>
 <pre><code>$ man git
 </code></pre>
-<p>这里介绍git的基本用法，另外还有github,gitpage,gitbook和其对应的国产软件将在之后再写写看。这是程序员们使用的基本工具，Linus发起的版本控制软件，只学学最简单的直接用。</p>
 
-<p>git可以记录并显示文件修改历史，还可以进行不同版本的比较，如果需要可以退回上次的修改。这里所讲都是linux下的内容(简单!)，win的请自行百度。</p>
+<p>当我们学习使用git时，查看命令最快的方法是用man命令，对每个命令都有人写好了标准的使用手册，还可以上网查阅相关资料，如<a href="https://git-scm.com/">git官网</a>，如<a href="http://afsapply.ihep.ac.cn/cchelp/zh/">高能所计算环境使用手册</a>，如<a href="https://devcharl.github.io/devcharl.github.io/2019/04/25/git_usage/">git Brief</a>，当然现在”STFW”是十分方便的，后面的内容这里不厌其烦地详细写了一下。</p>
 
-<p>(自己之前都没有写下来该怎么用，还经常忘记，今天又发生了代码误删的情况所以这回要把git学会了)</p>
+<p>这里介绍git的基本用法，只学学最简单的，另外还有github,gitpage,gitbook和其对应的国产软件将在之后再写写看。这是程序员们使用的基本工具，Linus Torwalds发起的版本控制软件，计算机科学快速分发共享的github正是于此建立。如同学所说去中心化的计算机科学的发展催化了开源，微软在收购github之后也正式高调加入了开源软件运动，这才有了.Net和c#的开源，这才使得如今在中美贸易战的情况下，我们中国人依然可以开发像<a href="https://github.com/SeeSharpOpenSource/SeeSharpTools">SeeSharp</a>这样优秀(笑)的想要设法替代<a href="http://www.ni.com/zh-cn.html">NI LabVIEW</a>的<a href="http://www.jytek.com/home">行业软件</a>。</p>
 
-<p>检查git:
-首先是检查git的版本:</p>
+<p>git可以记录并显示文件的修改历史，还可以进行不同历史版本的比较，如果需要可以退回上次的修改。这里所讲都是deepin linux下的内容(简单!)，win操作系统的请自行百度。</p>
+
+<p>(自己之前都没有写下来该怎么用，还经常忘记，今天又发生了代码误删的情况所以这回要把git学会了)(2017年11月的某一天)</p>
+
+<p>首先是检查git的版本:</p>
 
 <pre><code>$git --version 
 git version 1.8.2.1
 </code></pre>
 
-<p>好的，下一步是了解基本概念，什么是git(也可以跳过直接看使用):
-在Git中，每个版本库都叫做一个仓库（repository），每个仓库可以简单理解成一个目录，这个目录里面的所有文件都通过Git来实现版本管理，Git都能跟踪并记录在该目录下所有内容(子目录递归包含)发生的所有更新。假如我们现在建立一个仓库，仓库所在的这个目录中会有一个”.git”的文件夹(ls -al查看)。.git这个文件夹非常重要，所有的版本信息、更新记录，以及Git进行仓库管理的相关信息全都保存在这个文件夹里面。所以，想要删除该目录的git仓库设置，就删除该文件夹即可。</p>
+<p>下一步是了解基本概念，什么是git(也可以跳过直接看使用):</p>
 
-<p>接下来就是使用了，主要就是如下命令按顺序试试，基本就会了:</p>
+<p>在Git中，每个版本库都叫做一个仓库（repository），每个仓库可以简单理解成一个目录，这个目录里面的所有文件都通过Git来实现版本管理，Git都能跟踪并记录在该目录下所有内容(子目录递归包含)发生的所有更新。假如我们现在建立一个仓库，仓库所在的这个目录中会有一个”.git”的文件夹(ls -al查看)。.git这个文件夹非常重要，所有的版本信息、更新记录，以及Git进行仓库管理的相关信息全都保存在这个文件夹里面。所以，想要删除该目录的git仓库设置，就删除该文件夹即可。</p>
+
+<p>接下来就是使用，主要就是如下命令按顺序试试，基本就会了:</p>
 
 <pre><code>$git init //在当前目录(工作目录)初始化仓库
 #已初始化空的 Git 仓库于 /home/cuixf/abc/.git/
@@ -139,7 +141,7 @@ $git status //此时查看工作目录状态，如果有文件会显示
 #提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
 </code></pre>
 
-<pre><code>$git add . //注意有个"."，表示把"./"文件添加到Git里，建立工作空间Workspace，这时如果再次查看，"git status"可以看到新增了文件
+<pre><code>$git add . //注意有个"."，表示把"./"目录下的所有文件添加到Git里，建立工作空间Workspace，这时如果再次查看，"git status"可以看到新增了文件
 $ git commit -m "test1" //这里提交工作目录的当前版本给Git，可以输入此次修改的注释信息如"test1"，可以看到所有文件提交成功:
 #[master（根提交） 64f42d0] test1
 # 3 files changed, 0 insertions(+), 0 deletions(-)
@@ -156,13 +158,13 @@ git status //再次查看，发现目前版本提交完毕
 $ git diff //即可显示修改了什么，会有++,--这样的符号也就是删减情况，另外还可以使用图形GUI界面(gitk命令)看，确认修改后先如上add然后commit即可保存当前版本
 </code></pre>
 
-<p>另外如果联网后，想要下载/上传自己的仓库，可以看git的命令(clone,push,pull?)，看看github的基本用法。</p>
+<p>另外如果联网后，想要下载/上传自己的仓库到远程服务器，可以看git的命令(clone,push,pull?)，看看github的基本用法。</p>
 <pre><code>$git clone/push/pull
 </code></pre>
 
-<p>继续学习，可以看看多分支branch(git merge/rebase)，看看回滚(git reset/revert/checkout)，看看远程管理(git remote/tag)等等。</p>
+<p>继续学习，可以学习分支branch(git merge/rebase)，看看回滚(git reset/revert/checkout)，看看远程管理(git remote/tag)等等。</p>
 
-<p>这些虽然说净是些程序员的东西，但是既然目前计算机科学做的很好，自由软件运动思想也很超前影响力很大，那么了解一下也是很好的。看纪录片<a href="https://www.bilibili.com/video/av9512574/">操作系统革命</a>，很有意思，就是讲买了电脑如果受限win这样的操作系统，那么电脑就是租的，随时有可能用不了了，所以自由软件运动让买了电脑的人可以真正拥有。现在的开放研究运动其实也在很大程度上受到自由软件运动的启发。</p>
+<p>这些虽然说净是些程序员的东西，但是既然目前计算机科学做的很好，自由软件运动思想也很超前影响力很大，那么了解一下也是很好的。看纪录片<a href="https://www.bilibili.com/video/av9512574/">操作系统革命</a>，很有意思，影片中观点讲述了自由软件运动整体的发展过程，其基本观点是讲，电脑如果受限于win这样的商业的操作系统，购买的电脑就像是租的，受制于微软这家企业，所以自由软件运动让买了电脑的人可以真正拥有自己的电脑，最终使个人电脑提供的各种计算资源回到了个人的手中。现在的开放研究运动其实也在很大程度上受到自由软件运动的启发，要将科学研究的创新劳动过程带回到人的本质上来。</p>
 
 <p>当然物理学在开放研究方面一直做的都比较好，处在前沿位置<a href="https://scoap3.org/what-is-scoap3/">SCOAP</a>，发展劲头一直都在继续<a href="https://theconversation.com/how-the-insights-of-the-large-hadron-collider-are-being-made-open-to-everyone-70283">How the insights of the Large Hadron Collider are being made open to everyone</a>，未来的物理学发展可能超乎我们现在的想象。</p>
 
