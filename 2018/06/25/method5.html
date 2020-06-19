@@ -9,7 +9,7 @@
   <meta name="description" content="“你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”如何做联合拟合？首先这里就是应用Roofit的例子(Tutorials)来学习做联合拟合(SimutaneousFit)，这是一个比较常用的东西，当利用多个衰变道来重建共同的共振态时，可能要share一些变量，这样在拟合中可以得到描述该共振...">
   <meta name="baidu-site-verification" content="CPToBxeC1k"/>
 
-  <link rel="canonical" href="https://cuixiaofei.github.io/2018/06/25/method5.html">
+  <link rel="canonical" href="http://localhost:4000/2018/06/25/method5.html">
 
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/blog.css">
@@ -31,6 +31,8 @@
   <script src="assets/js/respond.min.js"></script>
   <![endif]-->
   
+
+
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
         MathJax.Hub.Config({
@@ -58,6 +60,7 @@
 </script>
 
 
+
 </head>
 
     <body>
@@ -68,7 +71,7 @@
         </a>
         <dev class="blogtitle">
           <h1><a href="">Xiaofei</a></h1>
-            <h5> 信仰共产主义，后现代结构主义者，奇妙发现世界～～ </h5>
+            <h5> 信仰共产主义，后现代主义者，结构主义者，奇妙发现世界～～ </h5>
         </dev>
     </dev>
 
@@ -82,6 +85,8 @@
             <li><a target="_blank" href="https://github.com/cuixiaofei/web">Github</a></li>
             <li>|</li>
             <li><a target="_blank" href="/about.html"> About Me</a></li>
+            <li>|</li>
+            <li><a href="/feed.xml">RSS subscribe</a></li>
         </ul>
     </nav>
 </header>
@@ -249,64 +254,67 @@ void rf501_simultaneouspdf()
 
   // 定义好画布，将前面的frame调用Draw()成员函数，就画图了
   TCanvas* c = new TCanvas("rf501_simultaneouspdf","rf403_simultaneouspdf",800,400);
-  c-&gt;Divide(2) ;
-  c-&gt;cd(1) ; gPad-&gt;SetLeftMargin(0.15) ; frame1-&gt;GetYaxis()-&gt;SetTitleOffset(1.4) ; frame1-&gt;Draw() ;
-  c-&gt;cd(2) ; gPad-&gt;SetLeftMargin(0.15) ; frame2-&gt;GetYaxis()-&gt;SetTitleOffset(1.4) ; frame2-&gt;Draw() ;
+  c-&amp;gt;Divide(2) ;
+  c-&amp;gt;cd(1) ; gPad-&amp;gt;SetLeftMargin(0.15) ; frame1-&amp;gt;GetYaxis()-&amp;gt;SetTitleOffset(1.4) ; frame1-&amp;gt;Draw() ;
+  c-&amp;gt;cd(2) ; gPad-&amp;gt;SetLeftMargin(0.15) ; frame2-&amp;gt;GetYaxis()-&amp;gt;SetTitleOffset(1.4) ; frame2-&amp;gt;Draw() ;
 }
-</code></pre>
+`&lt;/pre&gt;
 
-<p>实际上，我们看完上面的内容就可以了解到<strong>其实我们什么都没有做!</strong>我们做的仅仅是:</p>
+实际上，我们看完上面的内容就可以了解到**其实我们什么都没有做!**我们做的仅仅是:
 
-<pre><code>头文件
+&lt;pre&gt;`头文件
 函数{
   定义预期的多个模型model(RooAddPdf)
   数据data(DataSet),按照样本目录加载
   调用联合拟合类(RooSimultaneous).fitTo(data)
   画图,信号本底
 }
-</code></pre>
+`&lt;/pre&gt;
 
-<p>其他的当然也是类似，是计算机帮我们完成了这些操作，当然如涉及到其背后是如何工作的则要继续了解simultaneous背后的数学是如何工作的，比如具体的误差它是如何计算的？整体上参数是如何传递，计算是如何迭代的?编程?不存在的，可以放后去了解。这也学就是我们称之为脚本的原因吧，之所以使用脚本文件，就是相应的程序包提供了简易的借口，可以对应用的用户功能进行自定义。那么有没有办法不写这么多字呢好头大啊？有的，有的人用Python来自动写脚本，有的人直接用PyROOT。</p>
+其他的当然也是类似，是计算机帮我们完成了这些操作，当然如涉及到其背后是如何工作的则要继续了解simultaneous背后的数学是如何工作的，比如具体的误差它是如何计算的？整体上参数是如何传递，计算是如何迭代的?编程?不存在的，可以放后去了解。这也学就是我们称之为脚本的原因吧，之所以使用脚本文件，就是相应的程序包提供了简易的借口，可以对应用的用户功能进行自定义。那么有没有办法不写这么多字呢好头大啊？有的，有的人用Python来自动写脚本，有的人直接用PyROOT。
 
-<p><strong>使用Vim</strong></p>
+**使用Vim**
 
-<p>如何使用vim?</p>
+如何使用vim?
 
-<p>这个实际上吧vim的手册简单看一下，然后了解一下计算机发展过程，“文本”这个概念是如何发展的，就可以更好地使用vim，我自己在两年用了杨振伟老师推荐的一个简单的vimrc文件<a href="http://easwy.com/">易水博客</a>，还有重新编译了vim用来安装了<a href="https://github.com/cuixiaofei/vim-snippets">vim-snippets</a>后，再没有怎么搞过了，我想snippets应该已经功能很强大了。
-想起来第一次用vim其实就和我小时候玩游戏一样，上来就键盘挨个按一遍，软件也是，把菜单打开所有按钮按一遍，这就是我从来看任何计算机相关东西的所谓“窍门”。</p>
+这个实际上吧vim的手册简单看一下，然后了解一下计算机发展过程，“文本”这个概念是如何发展的，就可以更好地使用vim，我自己在两年用了杨振伟老师推荐的一个简单的vimrc文件[易水博客](http://easwy.com/)，还有重新编译了vim用来安装了[vim-snippets](https://github.com/cuixiaofei/vim-snippets)后，再没有怎么搞过了，我想snippets应该已经功能很强大了。
+想起来第一次用vim其实就和我小时候玩游戏一样，上来就键盘挨个按一遍，软件也是，把菜单打开所有按钮按一遍，这就是我从来看任何计算机相关东西的所谓“窍门”。
 
-<p><strong>继续试着学ROOT有什么方便的方法？</strong></p>
+**继续试着学ROOT有什么方便的方法？**
 
-<p>如果有机会找人教，可以问一下别人，或者有人给脚本，就可以学的很快，因为大家公用的东西都是比较成熟的。在简单用了之后，还要继续学懂一些，或者看到别的ROOT脚本文件有时候发现看不懂，甚至受到了惊吓，下面的一点内容我们试着想一想办法。</p>
+如果有机会找人教，可以问一下别人，或者有人给脚本，就可以学的很快，因为大家公用的东西都是比较成熟的。在简单用了之后，还要继续学懂一些，或者看到别的ROOT脚本文件有时候发现看不懂，甚至受到了惊吓，下面的一点内容我们试着想一想办法。
 
-<p>首先想到的就是，看一看例子tutorial，ROOT官方带有许多的例子，只要稍加更改就可以学到很多东西，上面篇幅中做联合拟合的内容就是依据这样的方式来做的，下面还有。</p>
+首先想到的就是，看一看例子tutorial，ROOT官方带有许多的例子，只要稍加更改就可以学到很多东西，上面篇幅中做联合拟合的内容就是依据这样的方式来做的，下面还有。
 
-<p>一个是搜索使用的类的定义和继承关系，在网站这里<a href="https://root.cern.ch/doc/master/annotated.html">ClassIndex</a>，比如可以试着搜索ProjWData这个成员，也可以在<a href="https://root.cern.ch/doc/master/annotated.html">ClassList</a>用搜索框或者是按类找名字ctrl+f，这样搜索可以找到ROOT编程的详细内容。
-可以看到，其定义有两个如下：</p>
+一个是搜索使用的类的定义和继承关系，在网站这里[ClassIndex](https://root.cern.ch/doc/master/annotated.html)，比如可以试着搜索ProjWData这个成员，也可以在[ClassList](https://root.cern.ch/doc/master/annotated.html)用搜索框或者是按类找名字ctrl+f，这样搜索可以找到ROOT编程的详细内容。
+可以看到，其定义有两个如下：
 
-<p>第一个定义可以看出，其可有两个变量，一是数据集RooDataSet(RooAbsData三个成员中的一个)，从下面的继承图可以清楚地了解到程序的调用关系，第二个可能用于分bin的问题，<img src="/assets/img/RooAbsData.png" alt="" /></p>
-<pre><code>RooFit::ProjWData  ( const RooAbsData &amp; projData,
+第一个定义可以看出，其可有两个变量，一是数据集RooDataSet(RooAbsData三个成员中的一个)，从下面的继承图可以清楚地了解到程序的调用关系，第二个可能用于分bin的问题，![](/assets/img/RooAbsData.png)
+
+&lt;pre&gt;`RooFit::ProjWData  ( const RooAbsData &amp;amp; projData,
 Bool_t  binData = kFALSE
 )
-</code></pre>
+`&lt;/pre&gt;
 
-<p>从这里上下两个定义可以看出，ROOT软件包整体内部命名是十分规范的，我们在使用的时候也要尽量把变量函数名写的清楚易懂有一定的规范。如BES合作组的BOSS分析环境，可以查看BOSS定义的基本的类和继承图<a href="http://bes3.to.infn.it/Boss/7.0.2/html/classes.html">BOSS Class Reference Documentation</a>，这里可以清楚看到很多分析中使用的内容。当然，如果有较为统一的规范是不容易的，因为在传统研究中各种不同群体都有可能产生各自内部的“独特语言系统”。</p>
+从这里上下两个定义可以看出，ROOT软件包整体内部命名是十分规范的，我们在使用的时候也要尽量把变量函数名写的清楚易懂有一定的规范。如BES合作组的BOSS分析环境，可以查看BOSS定义的基本的类和继承图[BOSS Class Reference Documentation](http://bes3.to.infn.it/Boss/7.0.2/html/classes.html)，这里可以清楚看到很多分析中使用的内容。当然，如果有较为统一的规范是不容易的，因为在传统研究中各种不同群体都有可能产生各自内部的“独特语言系统”。
 
-<p>第二个定义可以看出，其可有三个变量，一是从数据集里取数据的方法(RooCategory是其中一个)，第二个见上，第三个可能用于分bin的问题</p>
-<pre><code>RooFit::ProjWData  ( const RooArgSet &amp; projSet,
-const RooAbsData &amp; projData,
+第二个定义可以看出，其可有三个变量，一是从数据集里取数据的方法(RooCategory是其中一个)，第二个见上，第三个可能用于分bin的问题
+
+&lt;pre&gt;`RooFit::ProjWData  ( const RooArgSet &amp;amp; projSet,
+const RooAbsData &amp;amp; projData,
 Bool_t binData = kFALSE
 )
-</code></pre>
+`&lt;/pre&gt;
 
-<p>可以看出我们这里使用了两次，一次第一个定义，一次第二个定义，并且没有用bin变量。
+可以看出我们这里使用了两次，一次第一个定义，一次第二个定义，并且没有用bin变量。
 这样我们通过查看这些的定义关系，有助于梳理清楚他们的调用关系，用起来就不会发怵。
 所谓计算机程序就是一大堆的相互调用，从ifelse编译一直调用到逻辑门基本不会出错，如果出现问题，就查看定义看哪里调用跑丢了，如果能够解决好把调用的类型放对了，一般程序都能正常运行，就像喂小猫一样。
-如果想要训练一下编程时候的脑子，其实有更直观一点的编程比如说用G语言LabVIEW，你可以看数据流，并且简单的编程结构也比较直观，实际应用也比较广泛，比如BESIII值班室的用户界面系统，可以看到很多都是使用LabVIEW编的。另外甚至可以通过一些软件也能训练，如<a href="http://www.zachtronics.com">Zachronic</a>公司旗下的软件都很硬核，还有辅助学习各种编程语言的网站<a href="www.codingame.com">酷代码</a>非常有趣，很全各种计算机语言都能找到。</p>
+如果想要训练一下编程时候的脑子，其实有更直观一点的编程比如说用G语言LabVIEW，你可以看数据流，并且简单的编程结构也比较直观，实际应用也比较广泛，比如BESIII值班室的用户界面系统，可以看到很多都是使用LabVIEW编的。另外甚至可以通过一些软件也能训练，如[Zachronic](http://www.zachtronics.com)公司旗下的软件都很硬核，还有辅助学习各种编程语言的网站[酷代码](www.codingame.com)非常有趣，很全各种计算机语言都能找到。
 
-<p>可以在网上<a href="https://root-forum.cern.ch">ROOT Forum</a>看别人遇到了什么问题，如果身边没人也可以试着问，还可以看看同行都在关心什么问题？
-这里提供一个问问题模板<a href="https://root-forum.cern.ch/t/how-to-automatically-generate-classes-code/4667">参考</a>:</p>
-<pre><code>Hi,
+可以在网上[ROOT Forum](https://root-forum.cern.ch)看别人遇到了什么问题，如果身边没人也可以试着问，还可以看看同行都在关心什么问题？
+这里提供一个问问题模板[参考](https://root-forum.cern.ch/t/how-to-automatically-generate-classes-code/4667):
+
+&lt;pre&gt;`Hi,
 I want to do sth.
 I have learned "sth. or some class" which helps me in doing sth. This looks like it could help me but I don't know HOW.
 I need to to do similar processing but for a different "sth.? dataset?".
@@ -318,28 +326,33 @@ Thanks
 Sample: "your sample idea"
 Code:"your sample code"
 </code></pre>
+
 <p>可以找一个改改用，也可以直接随便问(English)，毕竟是论坛嘛。主要是可以看看大家都在关心什么问题，可以了解一下。</p>
 
-<div><table align="right"><td align="right" bgcolor="#FFFFFF" width="100"><font color="#F0F0F0">~~继续思考~~</font></td></table><br />
+<div><table align="right"><td align="right" bgcolor="#FFFFFF" width="200"><font color="#F0F0F0">~~继续思考~~</font></td></table><br />
 <table align="right"><td align="right" bgcolor="#F5F5F5" width="300"><font color="#000000">-------开放研究之所以可能</font></td></table></div>
 
-            <footer class="article-footer">
-    <div class="authorimage">
-      <img src="/assets/img/avatar.JPG" alt="My Avatar" class="img-circle">
-    </div>
-    <section class="author">
-      <h4><a href="/about.html">小非</a></h4>
-        <a href="mailto:cui_xiaofei@163.com">cui_xiaofei@163.com</a>
-    </section>
-</footer>
 
+            
+              
+<script>
+var idcomments_acct = '1f2fecd55fff91f3ee6d2fd934e2de23';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+
+
+
+            
         </main>
 
         <div class="footer-copyright">
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-md-12">
-              Copyright &copy; 2017-2019 崔小非 - All rights based on <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>.
+              Copyright &copy; 2018 崔小非 - All rights based on <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
             </div>
         </div>
     </div>
@@ -353,7 +366,7 @@ Code:"your sample code"
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-74743250-2', 'auto');
+  ga('create', 'UA-146089728-1', 'auto');
   ga('send', 'pageview');
 
 </script>
