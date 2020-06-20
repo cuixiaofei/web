@@ -3,7 +3,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title></title>
-        <description>Xiaofei</description>
+        <description>
+          Xiaofei
+          欢迎大家使用RSS订阅
+        </description>
         <link>https://xiaophy.com</link>
         <atom:link href="https://xiaophy.com/feed.xml" rel="self" type="application/rss+xml" />
         
