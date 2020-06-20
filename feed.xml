@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?xml-stylesheet type="text/xsl" title="XSL Formatting" href="/assets/xsl/blog-index.xsl" media="all" ?>
-
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>小非的物理小站</title>
     <description>Xiaofei</description>
     <link>https://xiaophy.com/</link>
     <atom:link href="https://xiaophy.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 20 Jun 2020 21:54:58 +0800</pubDate>
-    <lastBuildDate>Sat, 20 Jun 2020 21:54:58 +0800</lastBuildDate>
+    <pubDate>Sat, 20 Jun 2020 21:56:22 +0800</pubDate>
+    <lastBuildDate>Sat, 20 Jun 2020 21:56:22 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
