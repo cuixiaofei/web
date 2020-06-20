@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" title="XSL Formatting" href="/assets/xsl/blog-index.xsl" media="all" ?>
+<?xml-stylesheet type="text/xsl" title="XSL Formatting" href="/assets/xsl/rss.xsl" media="all" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>小非的物理小站</title>
-    <description>Xiaofei</description>
-    <link>https://xiaophy.com/</link>
-    <atom:link href="https://xiaophy.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 20 Jun 2020 22:21:13 +0800</pubDate>
-    <lastBuildDate>Sat, 20 Jun 2020 22:21:13 +0800</lastBuildDate>
-    <generator>Jekyll v3.8.3</generator>
-    
-      <item>
-        <title>开放研究是如何直面命题</title>
-        <description>&lt;p&gt;　　正如《西西弗斯》中加缪所言，自杀是一个哲学命题，这里将对这一命题的进行一点点讨论，以便对人们的一些想法进行一定的解释。
+    <channel>
+        <title></title>
+        <description>Xiaofei</description>
+        <link>https://xiaophy.com</link>
+        <atom:link href="https://xiaophy.com/feed.xml" rel="self" type="application/rss+xml" />
+        
+            <item>
+                <title>开放研究是如何直面命题</title>
+                <description>&lt;p&gt;　　正如《西西弗斯》中加缪所言，自杀是一个哲学命题，这里将对这一命题的进行一点点讨论，以便对人们的一些想法进行一定的解释。
 为避免歧义，这里所指的自杀并非结束自己的生命，而是指一个人选择思想停滞的方式，也就是作为人类思想的一个特有行为来进行解读，缩小了讨论的范围，新命名为“自戕”。&lt;/p&gt;
 
 &lt;p&gt;　　首先介绍人类的一些思想的特质，如人拥有记忆，人有反思的能力，人的思维是可以通过反思进行自我调节和改变的等等。这时我们必须提到的是，社会中总有一些人认为社会的某些现象是无法改变甚至是轮回的，因此这些人认为这样的事情可以用一种思维理解就是“你必须这样做”或言“你只有这样做”，举例为吃苦的轮回问题，这些人认为“我吃过这样的苦，你只有也尝尝甚至尝个够才能明白”，这些人所为并不是为了这种苦头的避免而是认为这种苦头是轮回的是无法改变的，其实纵观社会的发展社会总是不断变化的不断发展的，正如马克思所言“一切现在的都是要灭亡的”，那么为什么这些人形成了“就是这样”的无法做任何改变的想法了呢？&lt;/p&gt;
@@ -28,16 +25,14 @@
 &lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;200&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~继续思考~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;br /&gt;
 &lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
 </description>
-        <pubDate>Fri, 22 Feb 2019 00:00:00 +0800</pubDate>
-        <link>https://xiaophy.com/2019/02/22/thinking10.html</link>
-        <guid isPermaLink="true">https://xiaophy.com/2019/02/22/thinking10.html</guid>
+                <pubDate>Fri, 22 Feb 2019 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2019/02/22/thinking10.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2019/02/22/thinking10.html</guid>
+            </item>
         
-        
-      </item>
-    
-      <item>
-        <title>试对开放研究的评论2</title>
-        <description>&lt;p&gt;AOD还有类似的机构都可以直接在网络上参与，CERN和LIGO等实验均有开放的数据&lt;/p&gt;
+            <item>
+                <title>试对开放研究的评论2</title>
+                <description>&lt;p&gt;AOD还有类似的机构都可以直接在网络上参与，CERN和LIGO等实验均有开放的数据&lt;/p&gt;
 
 &lt;p&gt;随着社会发展，越来越多的人将会走上终身学习的道路，而不断出现的新生儿们他们所接受的教育质量在不断提升，后来人学习领悟知识和创新的速度会不断提高，客观上导致比我们更小的年轻人正在光速追赶甚至很快就会在各方面超越，这恐怕是客观上将要发生的事情。比如在网上我有认识的小孩，现在刚刚上大一就已经对linux系统信手拈来就搞个桌面程序，他们的网络视野非常宽广。另外的话，就拿明年来说，2020年中国就要消灭绝对贫困，一个这样没有贫困人口的国家，在2020年中出生的小朋友们无疑是历史上的黄金一代，所谓的人工智能也不断涌现。面对这样的情况，先来人的我们必然面临淘汰，如果没有适当的淘汰机制则意味着冲突，在21世纪的今天冲突无疑不是我们所追求的，那么能化解和促进这样问题的，无疑就是开放研究。这也就是开放研究出现的客观情况，我想也是社会发展的必然。&lt;/p&gt;
 
@@ -48,16 +43,14 @@
 &lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;200&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~继续思考~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;br /&gt;
 &lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
 </description>
-        <pubDate>Mon, 24 Dec 2018 00:00:00 +0800</pubDate>
-        <link>https://xiaophy.com/2018/12/24/OR6.html</link>
-        <guid isPermaLink="true">https://xiaophy.com/2018/12/24/OR6.html</guid>
+                <pubDate>Mon, 24 Dec 2018 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2018/12/24/OR6.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2018/12/24/OR6.html</guid>
+            </item>
         
-        
-      </item>
-    
-      <item>
-        <title>开放研究之所以可能(二)</title>
-        <description>&lt;p&gt;(不是引言)以下全文所讨论的错误系统其名字容易给人产生误导，晚上和同学聊天的过程中，同学指出逻辑上构建的系统并不是隐含着错误，而是逻辑系统本身是没有错误的，这种系统的描述可能无法完备，所以这里其实应将错误系统名字修改一下，为冗余系统。这是一个恰当的名字，但是由于下面内容均是参考，所以尊重作者以下依然成为错误系统，当然其实并没有什么错，而是有一些发展的可能，即冗余。&lt;/p&gt;
+            <item>
+                <title>开放研究之所以可能(二)</title>
+                <description>&lt;p&gt;(不是引言)以下全文所讨论的错误系统其名字容易给人产生误导，晚上和同学聊天的过程中，同学指出逻辑上构建的系统并不是隐含着错误，而是逻辑系统本身是没有错误的，这种系统的描述可能无法完备，所以这里其实应将错误系统名字修改一下，为冗余系统。这是一个恰当的名字，但是由于下面内容均是参考，所以尊重作者以下依然成为错误系统，当然其实并没有什么错，而是有一些发展的可能，即冗余。&lt;/p&gt;
 
 &lt;p&gt;为了更好地了解和思考开放研究的可能性，这里引入一些概念来进行讨论，对科学研究过程中出现的一些问题进行所谓消避错，并且重新讨论消避错过程中的可信任问题。之所以看到错误系统这本书，只是闲来瞎逛碰到的&lt;/p&gt;
 
@@ -127,16 +120,14 @@
 &lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;200&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~未完待续~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;
 &lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
 </description>
-        <pubDate>Fri, 16 Nov 2018 00:00:00 +0800</pubDate>
-        <link>https://xiaophy.com/2018/11/16/OR5.html</link>
-        <guid isPermaLink="true">https://xiaophy.com/2018/11/16/OR5.html</guid>
+                <pubDate>Fri, 16 Nov 2018 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2018/11/16/OR5.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2018/11/16/OR5.html</guid>
+            </item>
         
-        
-      </item>
-    
-      <item>
-        <title>试对开放研究的评论1</title>
-        <description>&lt;blockquote&gt;
+            <item>
+                <title>试对开放研究的评论1</title>
+                <description>&lt;blockquote&gt;
   &lt;p&gt;(引言)为什么要有开放研究与开放科学两个名字呢？在我的小站里就写成是开放研究了，因为觉得“研究”二字既是名词也是动词，而开放科学是一个不断发展的概念，所以用动词“研究”来描述更有活力一些。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -175,16 +166,14 @@
 &lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;200&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~继续思考~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;br /&gt;
 &lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
 </description>
-        <pubDate>Wed, 24 Oct 2018 00:00:00 +0800</pubDate>
-        <link>https://xiaophy.com/2018/10/24/OR4.html</link>
-        <guid isPermaLink="true">https://xiaophy.com/2018/10/24/OR4.html</guid>
+                <pubDate>Wed, 24 Oct 2018 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2018/10/24/OR4.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2018/10/24/OR4.html</guid>
+            </item>
         
-        
-      </item>
-    
-      <item>
-        <title>高能物理实验展望</title>
-        <description>&lt;p&gt;高能物理实验目前虽然自己已经接触到了，但是由于仅仅是做实验数据统计分析，所以只是做了一个螺丝钉，久而久之极易忘却物理本身。这里试着快速抄一点东西看一看，以便使自己尽可能成为实验物理研究的一员。最近也看到是北京正负电子对撞机建成30周年，也祝愿中国的高能物理事业蒸蒸日上。
+            <item>
+                <title>高能物理实验展望</title>
+                <description>&lt;p&gt;高能物理实验目前虽然自己已经接触到了，但是由于仅仅是做实验数据统计分析，所以只是做了一个螺丝钉，久而久之极易忘却物理本身。这里试着快速抄一点东西看一看，以便使自己尽可能成为实验物理研究的一员。最近也看到是北京正负电子对撞机建成30周年，也祝愿中国的高能物理事业蒸蒸日上。
 在之前&lt;a href=&quot;http://chuansong.me/n/669376351760&quot;&gt;杨振宁的文章&lt;/a&gt;中我们可以看到，其对加速器物理不无悲观态度，提出应该探寻新型加速器的可能。自己懂不多，这里分成两种，一是新的技术旧的物理过程，二是探索新的物理过程。&lt;/p&gt;
 
 &lt;p&gt;##旧的对撞，新的加速器技术
@@ -199,16 +188,14 @@
 &lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;200&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~继续思考~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;br /&gt;
 &lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
 </description>
-        <pubDate>Sat, 13 Oct 2018 00:00:00 +0800</pubDate>
-        <link>https://xiaophy.com/2018/10/13/ex1.html</link>
-        <guid isPermaLink="true">https://xiaophy.com/2018/10/13/ex1.html</guid>
+                <pubDate>Sat, 13 Oct 2018 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2018/10/13/ex1.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2018/10/13/ex1.html</guid>
+            </item>
         
-        
-      </item>
-    
-      <item>
-        <title>试做名词解释</title>
-        <description>&lt;p&gt;这里试着对一些接触到的名词进行了解，避免因为专业词汇产生障碍，当然很多可能理解错误随着学习会再修改。这里绝不做科普，所以可能需要数学描述和公式的展示，或者易于了解的参考文献，但是碍于水平依然要之后修改。最近刚刚配置兼容了公式。&lt;/p&gt;
+            <item>
+                <title>试做名词解释</title>
+                <description>&lt;p&gt;这里试着对一些接触到的名词进行了解，避免因为专业词汇产生障碍，当然很多可能理解错误随着学习会再修改。这里绝不做科普，所以可能需要数学描述和公式的展示，或者易于了解的参考文献，但是碍于水平依然要之后修改。最近刚刚配置兼容了公式。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;ul&gt;
@@ -292,16 +279,14 @@
 &lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Thu, 19 Jul 2018 00:00:00 +0800</pubDate>
-        <link>https://xiaophy.com/2018/07/19/method7.html</link>
-        <guid isPermaLink="true">https://xiaophy.com/2018/07/19/method7.html</guid>
+                <pubDate>Thu, 19 Jul 2018 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2018/07/19/method7.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2018/07/19/method7.html</guid>
+            </item>
         
-        
-      </item>
-    
-      <item>
-        <title>如何问问题?</title>
-        <description>&lt;p&gt;什么是一个好问题？&lt;/p&gt;
+            <item>
+                <title>如何问问题?</title>
+                <description>&lt;p&gt;什么是一个好问题？&lt;/p&gt;
 
 &lt;p&gt;想要搞清楚这个非常之难，是反映水平的直接方式，听报告自己没有问过问题，主要听听别人怎么问，这里只能管窥。一个好的问题，我想可以问该研究中关注的重点，有想法也可以提供帮助对策，也可以问及自己研究与该研究有交集的部分，如果能为听闻的所有人都有帮助也很不错，或者对该研究想法的延伸和见解。还有经验丰富的人对新手的关照和严格要求也是很好的问题，类似于围棋中的执导棋，例如有老师问过:分析中出现了运动学拟合，那么在运动学拟合之后粒子动量的“测量精度”是变好了？还是变坏了？答案是变好了，可能还要继续问其程度会约有多大能不能量化有没有百分比？还没有搞懂，需要待了解后再答。&lt;/p&gt;
 
@@ -322,16 +307,14 @@
 &lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;200&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~继续思考~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;br /&gt;
 &lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
 </description>
-        <pubDate>Wed, 18 Jul 2018 00:00:00 +0800</pubDate>
-        <link>https://xiaophy.com/2018/07/18/method6.html</link>
-        <guid isPermaLink="true">https://xiaophy.com/2018/07/18/method6.html</guid>
+                <pubDate>Wed, 18 Jul 2018 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2018/07/18/method6.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2018/07/18/method6.html</guid>
+            </item>
         
-        
-      </item>
-    
-      <item>
-        <title>如何用ROOT做联合拟合？</title>
-        <description>&lt;p&gt;&lt;em&gt;“你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”&lt;/em&gt;&lt;/p&gt;
+            <item>
+                <title>如何用ROOT做联合拟合？</title>
+                <description>&lt;p&gt;&lt;em&gt;“你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;如何做联合拟合？&lt;/strong&gt;&lt;/p&gt;
 
@@ -560,16 +543,14 @@ Code:&quot;your sample code&quot;
 &lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;200&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~继续思考~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;br /&gt;
 &lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
 </description>
-        <pubDate>Mon, 25 Jun 2018 00:00:00 +0800</pubDate>
-        <link>https://xiaophy.com/2018/06/25/method5.html</link>
-        <guid isPermaLink="true">https://xiaophy.com/2018/06/25/method5.html</guid>
+                <pubDate>Mon, 25 Jun 2018 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2018/06/25/method5.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2018/06/25/method5.html</guid>
+            </item>
         
-        
-      </item>
-    
-      <item>
-        <title>开放研究之所以可能(一)</title>
-        <description>&lt;p&gt;开放研究之所以可能(一)&lt;/p&gt;
+            <item>
+                <title>开放研究之所以可能(一)</title>
+                <description>&lt;p&gt;开放研究之所以可能(一)&lt;/p&gt;
 
 &lt;p&gt;开放研究？这是过去和现在很多人都做过的事情，这里放在一起想，
 得出下面的基本方向，是通过对开放研究类似活动的一种再次发现与总结。
@@ -592,29 +573,191 @@ Code:&quot;your sample code&quot;
 &lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;200&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~继续思考~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;br /&gt;
 &lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
 </description>
-        <pubDate>Fri, 19 Jan 2018 00:00:00 +0800</pubDate>
-        <link>https://xiaophy.com/2018/01/19/OR3.html</link>
-        <guid isPermaLink="true">https://xiaophy.com/2018/01/19/OR3.html</guid>
+                <pubDate>Fri, 19 Jan 2018 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2018/01/19/OR3.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2018/01/19/OR3.html</guid>
+            </item>
         
-        
-      </item>
-    
-      <item>
-        <title>开放研究个人守则</title>
-        <description>&lt;p&gt;开放研究个人守则&lt;/p&gt;
+            <item>
+                <title>开放研究个人守则</title>
+                <description>&lt;p&gt;开放研究个人守则&lt;/p&gt;
 
 &lt;p&gt;1.&lt;/p&gt;
 
 &lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;200&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~继续思考~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;br /&gt;
 &lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
 </description>
-        <pubDate>Thu, 11 Jan 2018 00:00:00 +0800</pubDate>
-        <link>https://xiaophy.com/2018/01/11/OR2.html</link>
-        <guid isPermaLink="true">https://xiaophy.com/2018/01/11/OR2.html</guid>
+                <pubDate>Thu, 11 Jan 2018 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2018/01/11/OR2.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2018/01/11/OR2.html</guid>
+            </item>
         
-        
-      </item>
-    
-  </channel>
-</rss>
+            <item>
+                <title>什么是开放研究?</title>
+                <description>&lt;p&gt;&lt;strong&gt;什么是开放研究？&lt;/strong&gt;&lt;/p&gt;
 
+&lt;p&gt;科学的所指这里包括自然科学与社会科学，中国科学可能还不是最发达，很多人目前也和科学研究是接不上的。更进一步讲，可以说即使科学发达的国家(如现在欧美?)，这种发达也不是每个人所能触及的。&lt;/p&gt;
+
+&lt;p&gt;科学在的历史发展长河中更由那些聪明的人、有天赋的人、勤奋努力的人、富有的人、善于交际的人等等特别的一些人所主导和影响，这些人被称之为科学工作者或择其优者—科学家。&lt;/p&gt;
+
+&lt;p&gt;随着时代发展，人们不断将不断从旧的工作生活中脱离出来，投奔至新的生活，逐渐地，所谓科学研究，社会的对其需求相应会不断增大。&lt;/p&gt;
+
+&lt;p&gt;那么一系列的问题就随之而来，等待着我们解答：
+科学研究的基本方法是什么呢？有怎样的规律？
+科学研究与教育之间是怎样的关系呢？
+科学知识的传递与新知识的发现和运用又是怎样的过程呢？
+科学研究的方法是怎样演变的呢？要走向何处呢？&lt;/p&gt;
+
+&lt;p&gt;这些问题是当然是难以回答的。但可以看到传统研究的学术交流在其中是十分重要的，在17世纪，首先出现了学术期刊，就是用来科学工作者之间进行交流的。尔后不断有各种科学交流的活动产生，学术活动、团体、组织。直到现代，通讯工具的发展，各个科学研究团体的会议、组织，作为标志性的如开放期刊，预印本等开放获取的期刊不断出现，包括开放源代码的计算机技术发展，等等，都在促进着科学研究更加广泛深入的交流。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;开放研究的具体内容?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;开放研究(Open Research)或者叫开放科学(Opne Science)，是使得科学研究的方法和内容的全面传播成为可能的一种活动。&lt;/p&gt;
+
+&lt;p&gt;通过这一活动，鼓励出版机构出版开放获取人人可得的研究文献(open access)，鼓励科学工作者开放研究笔记(open notebook science)等等，并使得科学研究相关的资料获取成为每个人的可能。&lt;/p&gt;
+
+&lt;p&gt;更加具体的内容，如果有空闲还要继续了解和思考，这个博客所写的所有东西都会不断更新，开放研究中最重要的部分也莫过于开放研究笔记。
+破除只有科学工作者能够搞科学、只有科学工作者才会搞科学研究、只有科学工作者才配搞科学的片面认识。
+其实道理我们都懂，就是“授之以渔而非授之以鱼”。那么真正做起来可能吗？真的可能吗？
+那么何为科学本身呢？何为对科学的追求呢？如何实现呢是不是假大空的？难以回答&lt;/p&gt;
+
+&lt;p&gt;但是我想，现在有了一条新的道路愿意面对这些类似的问题，就是开放研究。开放研究希望能在传统研究的基础上增加一个维度。
+这就像是科学研究领域的极限运动，在“刀尖”上行走，一个不小心就出问题就会“摔死了”，如果把握的好，那么也许还能继续看到“明天中午za亮的太阳”。&lt;/p&gt;
+
+&lt;p&gt;对于一个人来说，这是一个可以直达科学研究大门的机会，自己从不认为只有那些特别的人才能进行科学研究，不是那些只有会的或擅长的人才能进行科学研究，况且历史上又那么多的大科学家并不是为了所谓“成就”来进行这一活动的，在今天的社会，这是有办法有可能有条件来创造机会，使得科学研究变得易于接近的。&lt;/p&gt;
+
+&lt;p&gt;现有科学研究的发展正在突飞猛进，我们可以相信，已经逐步有了科学研究的&lt;a href=&quot;http://paperscape.org&quot;&gt;基本地图&lt;/a&gt;，那么如何在这张地图上行走，能否有一个导航?能否可以指一个大致的方向来帮助容易迷路的人们，使迷途不再忧伤。&lt;/p&gt;
+
+&lt;p&gt;任何一个人当然都是无法进行这样的事情的，但是确实一直以来有许多人找到了这样的方向，他们在进行这开放科学的相关工作，这里也对他们致敬。&lt;/p&gt;
+
+&lt;p&gt;本是无意，将要收笔之时，才突然发现今天是2018年考研，作为纪念我就把上面写的东西发出去。&lt;/p&gt;
+
+&lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;100&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~继续思考~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;
+&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
+</description>
+                <pubDate>Sun, 24 Dec 2017 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2017/12/24/OR1.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2017/12/24/OR1.html</guid>
+            </item>
+        
+            <item>
+                <title>文件修改忘记改了什么怎么办?使用git</title>
+                <description>&lt;p&gt;&lt;em&gt;”—-你本来不该知道这些的，可是现在我们没有更好的工具，所以得这样弄一下……”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;这里主要就是解决一个问题: 在平时对纯文本进行编辑时，不论这文本是程序代码还是文字，任何人都容易在编辑时出错，那么如何看出一个文件我们改了什么?什么时候改的？这时就要用到git这个工具，来做一下简单的版本控制。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;```
+$ man git
+```
+
+当我们学习使用git时，查看命令最快的方法是用man命令，对每个命令都有人写好了标准的使用手册，还可以上网查阅相关资料，如[git官网](https://git-scm.com/)，如[高能所计算环境使用手册](http://afsapply.ihep.ac.cn/cchelp/zh/)，如[git Brief](https://devcharl.github.io/devcharl.github.io/2019/04/25/git_usage/)，当然现在”STFW”是十分方便的，后面的内容这里不厌其烦地详细写了一下。
+
+这里介绍git的基本用法，只学学最简单的，另外还有github,gitpage,gitbook和其对应的国产软件将在之后再写写看。这是程序员们使用的基本工具，Linus Torwalds发起的版本控制软件，计算机科学快速分发共享的github正是于此建立。如同学所说去中心化的计算机科学的发展催化了开源，微软在收购github之后也正式高调加入了开源软件运动，这才有了.Net和c#的开源，这才使得如今在中美贸易战的情况下，我们中国人依然可以开发像[SeeSharp](https://github.com/SeeSharpOpenSource/SeeSharpTools)这样优秀(笑)的想要设法替代[NI LabVIEW](http://www.ni.com/zh-cn.html)的[行业软件](http://www.jytek.com/home)。
+
+git可以记录并显示文件的修改历史，还可以进行不同历史版本的比较，如果需要可以退回上次的修改。这里所讲都是deepin linux下的内容(简单!)，win操作系统的请自行百度。
+
+(自己之前都没有写下来该怎么用，还经常忘记，今天又发生了代码误删的情况所以这回要把git学会了)(2017年11月的某一天)
+
+首先是检查git的版本:
+
+```
+$git --version 
+git version 1.8.2.1
+```
+
+下一步是了解基本概念，什么是git(也可以跳过直接看使用):
+
+在Git中，每个版本库都叫做一个仓库（repository），每个仓库可以简单理解成一个目录，这个目录里面的所有文件都通过Git来实现版本管理，Git都能跟踪并记录在该目录下所有内容(子目录递归包含)发生的所有更新。假如我们现在建立一个仓库，仓库所在的这个目录中会有一个”.git”的文件夹(ls -al查看)。.git这个文件夹非常重要，所有的版本信息、更新记录，以及Git进行仓库管理的相关信息全都保存在这个文件夹里面。所以，想要删除该目录的git仓库设置，就删除该文件夹即可。
+
+接下来就是使用，主要就是如下命令按顺序试试，基本就会了:
+
+```
+$git init //在当前目录(工作目录)初始化仓库
+#已初始化空的 Git 仓库于 /home/cuixf/abc/.git/
+$git status //此时查看工作目录状态，如果有文件会显示
+#位于分支 master
+#
+#初始提交
+#
+#未跟踪的文件:
+#  （使用 &quot;git add &amp;amp;lt;文件&amp;amp;gt;...&quot; 以包含要提交的内容）
+#
+#	a.txt
+#	a/
+#
+#提交为空，但是存在尚未跟踪的文件（使用 &quot;git add&quot; 建立跟踪）
+```
+
+```
+$git add . //注意有个&quot;.&quot;，表示把&quot;./&quot;目录下的所有文件添加到Git里，建立工作空间Workspace，这时如果再次查看，&quot;git status&quot;可以看到新增了文件
+$ git commit -m &quot;test1&quot; //这里提交工作目录的当前版本给Git，可以输入此次修改的注释信息如&quot;test1&quot;，可以看到所有文件提交成功:
+#[master（根提交） 64f42d0] test1
+# 3 files changed, 0 insertions(+), 0 deletions(-)
+# create mode 100644 a.txt
+# create mode 100644 a/b.txt
+# create mode 100644 a/c/c.txt
+git status //再次查看，发现目前版本提交完毕
+#On branch master
+#nothing to commit (working directory clean)
+```
+
+最主要的对文件修改历史进行比较，如果此时已经修改工作目录的文件，修改保存后，输入
+
+```
+$ git status //发现已经出现修改
+$ git diff //即可显示修改了什么，会有++,--这样的符号也就是删减情况，另外还可以使用图形GUI界面(gitk命令)看，确认修改后先如上add然后commit即可保存当前版本
+```
+
+另外如果联网后，想要下载/上传自己的仓库到远程服务器，可以看git的命令(clone,push,pull?)，看看github的基本用法。
+
+```
+$git clone/push/pull
+```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;继续学习，可以学习分支branch(git merge/rebase)，看看回滚(git reset/revert/checkout)，看看远程管理(git remote/tag)等等。&lt;/p&gt;
+
+&lt;p&gt;这些虽然说净是些程序员的东西，但是既然目前计算机科学做的很好，自由软件运动思想也很超前影响力很大，那么了解一下也是很好的。看纪录片&lt;a href=&quot;https://www.bilibili.com/video/av9512574/&quot;&gt;操作系统革命&lt;/a&gt;，很有意思，影片中观点讲述了自由软件运动整体的发展过程，其基本观点是讲，电脑如果受限于win这样的商业的操作系统，购买的电脑就像是租的，受制于微软这家企业，所以自由软件运动让买了电脑的人可以真正拥有自己的电脑，最终使个人电脑提供的各种计算资源回到了个人的手中。现在的开放研究运动其实也在很大程度上受到自由软件运动的启发，要将科学研究的创新劳动过程带回到人的本质上来。&lt;/p&gt;
+
+&lt;p&gt;当然物理学在开放研究方面一直做的都比较好，处在前沿位置&lt;a href=&quot;https://scoap3.org/what-is-scoap3/&quot;&gt;SCOAP&lt;/a&gt;，发展劲头一直都在继续&lt;a href=&quot;https://theconversation.com/how-the-insights-of-the-large-hadron-collider-are-being-made-open-to-everyone-70283&quot;&gt;How the insights of the Large Hadron Collider are being made open to everyone&lt;/a&gt;，未来的物理学发展可能超乎我们现在的想象。&lt;/p&gt;
+
+&lt;p&gt;参考1:&lt;a href=&quot;http://www.cnblogs.com/wilber2013/category/643754.html&quot;&gt;Git Step by Step&lt;/a&gt;
+参考2:&lt;a href=&quot;http://www.cnblogs.com/xiaoya901109/&quot;&gt;IronMan&lt;/a&gt;&lt;/p&gt;
+
+&lt;div&gt;&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; width=&quot;100&quot;&gt;&lt;font color=&quot;#F0F0F0&quot;&gt;~~继续思考~~&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;br /&gt;
+&lt;table align=&quot;right&quot;&gt;&lt;td align=&quot;right&quot; bgcolor=&quot;#F5F5F5&quot; width=&quot;300&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;-------开放研究之所以可能&lt;/font&gt;&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
+</description>
+                <pubDate>Wed, 22 Nov 2017 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2017/11/22/method1.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2017/11/22/method1.html</guid>
+            </item>
+        
+            <item>
+                <title>开始篇</title>
+                <description>&lt;p&gt;本博客改编自https://liungkejin.github.io, 感谢&lt;a href=&quot;https://github.com/liungkejin/liungkejin.github.io&quot;&gt;梁窠金的个人博客&lt;/a&gt;带我入门。&lt;/p&gt;
+
+&lt;p&gt;小站源代码增加了一些说明，只需要修改名字和一些变量他人就可以重复使用，修改后存放于github，欢迎issues，继续修改中敬请期待～～&lt;/p&gt;
+
+&lt;p&gt;小站使用&lt;a href=&quot;http://jekyll.bootcss.com/&quot;&gt;jekyll&lt;/a&gt;还有&lt;a href=&quot;http://v3.bootcss.com&quot;&gt;bootstrap&lt;/a&gt;搭建!个人页面应用了 &lt;a href=&quot;http://ddbullfrog.github.io/resumecard/&quot;&gt;resumecard&lt;/a&gt;项目!&lt;/p&gt;
+
+&lt;p&gt;同时和粱窠金一样也要感谢&lt;a href=&quot;http://www.monkeysnatchbanana.com/&quot;&gt;Monkey Snatch Banana&lt;/a&gt; 博客，最初模板是人家的。其他模板将来可能会更新使用。&lt;/p&gt;
+
+&lt;p&gt;gitpage类似的主要写东西比较简洁直接进行表述，可以参考如&lt;a href=&quot;https://yifan92.github.io&quot;&gt;HEP note&lt;/a&gt;，如&lt;a href=&quot;http://www.yinwang.org/&quot;&gt;王垠博客&lt;/a&gt;。借鉴的博文还有: &lt;a href=&quot;http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html&quot;&gt;阮一峰&lt;/a&gt;，&lt;a href=&quot;https://blog.csdn.net/garfielder007/article/details/49992713&quot;&gt;garfielder007&lt;/a&gt;，&lt;a href=&quot;https://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html&quot;&gt;雨知&lt;/a&gt;，也可以上&lt;a href=&quot;https://www.v2ex.com&quot;&gt;V站&lt;/a&gt;看看。当然STFW亦可。&lt;/p&gt;
+
+&lt;p&gt;小站现已更新，内容基本选用&lt;a href=&quot;https://creativecommons.org/licenses/&quot;&gt;CC-BY-SA&lt;/a&gt;协议，这一协议保证了本博客内容的版权。
+小站文档分为建档和更新档，建档与更新档不同，网站中直接看到的是更新时间(每篇文字独立更新!!!，找找&lt;a href=&quot;https://xiaophy.com/menu.html&quot;&gt;更新了什么?&lt;/a&gt;)，建档时间可在网页源码中查看，建档和修改历史需到github查看。&lt;/p&gt;
+
+&lt;p&gt;小站现已加入&lt;a href=&quot;https://github.com/timqian/chinese-independent-blogs&quot;&gt;中文独立博客列表&lt;/a&gt;，已更新支持RSS订阅和在线评论。电脑坏了一次丢失了大量的文件，不过还好，脑子并没有丢掉。&lt;/p&gt;
+
+&lt;p&gt;本小站博客的标题看起来只是一些最基础的东西，简直是个笑话，但是开放研究不注重分享内容而是方法，所以其中的所写其实是类似的东西如何有方法学习和继续发展，这样就符合了小站建立的初衷。&lt;/p&gt;
+
+&lt;p&gt;感谢 &lt;a href=&quot;https://github.com&quot;&gt;github&lt;/a&gt; 提供的 Github Pages 功能!&lt;/p&gt;
+
+</description>
+                <pubDate>Mon, 11 Sep 2017 00:00:00 +0800</pubDate>
+                <link>https://xiaophy.com/2017/09/11/Regetting-Started.html</link>
+                <guid isPermaLink="true">https://xiaophy.com/2017/09/11/Regetting-Started.html</guid>
+            </item>
+        
+    </channel>
+</rss>
