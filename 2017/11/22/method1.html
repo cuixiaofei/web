@@ -95,6 +95,7 @@
         
 
         <main class="blogmain">
+
             <header>
                 <h1 class="article-title">文件修改忘记改了什么怎么办?使用git</h1>
                 <p class="article-time">
@@ -109,86 +110,89 @@
 
 <p>这里主要就是解决一个问题: 在平时对纯文本进行编辑时，不论这文本是程序代码还是文字，任何人都容易在编辑时出错，那么如何看出一个文件我们改了什么?什么时候改的？这时就要用到git这个工具，来做一下简单的版本控制。</p>
 
-<pre><code>```
-$ man git
-```
-
-当我们学习使用git时，查看命令最快的方法是用man命令，对每个命令都有人写好了标准的使用手册，还可以上网查阅相关资料，如[git官网](https://git-scm.com/)，如[高能所计算环境使用手册](http://afsapply.ihep.ac.cn/cchelp/zh/)，如[git Brief](https://devcharl.github.io/devcharl.github.io/2019/04/25/git_usage/)，当然现在”STFW”是十分方便的，后面的内容这里不厌其烦地详细写了一下。
-
-这里介绍git的基本用法，只学学最简单的，另外还有github,gitpage,gitbook和其对应的国产软件将在之后再写写看。这是程序员们使用的基本工具，Linus Torwalds发起的版本控制软件，计算机科学快速分发共享的github正是于此建立。如同学所说去中心化的计算机科学的发展催化了开源，微软在收购github之后也正式高调加入了开源软件运动，这才有了.Net和c#的开源，这才使得如今在中美贸易战的情况下，我们中国人依然可以开发像[SeeSharp](https://github.com/SeeSharpOpenSource/SeeSharpTools)这样优秀(笑)的想要设法替代[NI LabVIEW](http://www.ni.com/zh-cn.html)的[行业软件](http://www.jytek.com/home)。
-
-git可以记录并显示文件的修改历史，还可以进行不同历史版本的比较，如果需要可以退回上次的修改。这里所讲都是deepin linux下的内容(简单!)，win操作系统的请自行百度。
-
-(自己之前都没有写下来该怎么用，还经常忘记，今天又发生了代码误删的情况所以这回要把git学会了)(2017年11月的某一天)
-
-首先是检查git的版本:
-
-```
-$git --version 
-git version 1.8.2.1
-```
-
-下一步是了解基本概念，什么是git(也可以跳过直接看使用):
-
-在Git中，每个版本库都叫做一个仓库（repository），每个仓库可以简单理解成一个目录，这个目录里面的所有文件都通过Git来实现版本管理，Git都能跟踪并记录在该目录下所有内容(子目录递归包含)发生的所有更新。假如我们现在建立一个仓库，仓库所在的这个目录中会有一个”.git”的文件夹(ls -al查看)。.git这个文件夹非常重要，所有的版本信息、更新记录，以及Git进行仓库管理的相关信息全都保存在这个文件夹里面。所以，想要删除该目录的git仓库设置，就删除该文件夹即可。
-
-接下来就是使用，主要就是如下命令按顺序试试，基本就会了:
-
-```
-$git init //在当前目录(工作目录)初始化仓库
-#已初始化空的 Git 仓库于 /home/cuixf/abc/.git/
-$git status //此时查看工作目录状态，如果有文件会显示
-#位于分支 master
-#
-#初始提交
-#
-#未跟踪的文件:
-#  （使用 "git add &amp;lt;文件&amp;gt;..." 以包含要提交的内容）
-#
-#	a.txt
-#	a/
-#
-#提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
-```
-
-```
-$git add . //注意有个"."，表示把"./"目录下的所有文件添加到Git里，建立工作空间Workspace，这时如果再次查看，"git status"可以看到新增了文件
-$ git commit -m "test1" //这里提交工作目录的当前版本给Git，可以输入此次修改的注释信息如"test1"，可以看到所有文件提交成功:
-#[master（根提交） 64f42d0] test1
-# 3 files changed, 0 insertions(+), 0 deletions(-)
-# create mode 100644 a.txt
-# create mode 100644 a/b.txt
-# create mode 100644 a/c/c.txt
-git status //再次查看，发现目前版本提交完毕
-#On branch master
-#nothing to commit (working directory clean)
-```
-
-最主要的对文件修改历史进行比较，如果此时已经修改工作目录的文件，修改保存后，输入
-
-```
-$ git status //发现已经出现修改
-$ git diff //即可显示修改了什么，会有++,--这样的符号也就是删减情况，另外还可以使用图形GUI界面(gitk命令)看，确认修改后先如上add然后commit即可保存当前版本
-```
-
-另外如果联网后，想要下载/上传自己的仓库到远程服务器，可以看git的命令(clone,push,pull?)，看看github的基本用法。
-
-```
-$git clone/push/pull
-```
-</code></pre>
+<div class="language-plaintext highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span>```
+<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>$ man git
+<span class="line-numbers"> <a href="#n3" name="n3">3</a></span>```
+<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>
+<span class="line-numbers"> <a href="#n5" name="n5">5</a></span>当我们学习使用git时，查看命令最快的方法是用man命令，对每个命令都有人写好了标准的使用手册，还可以上网查阅相关资料，如[git官网](https://git-scm.com/)，如[高能所计算环境使用手册](http://afsapply.ihep.ac.cn/cchelp/zh/)，如[git Brief](https://devcharl.github.io/devcharl.github.io/2019/04/25/git_usage/)，当然现在”STFW”是十分方便的，后面的内容这里不厌其烦地详细写了一下。
+<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>
+<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>这里介绍git的基本用法，只学学最简单的，另外还有github,gitpage,gitbook和其对应的国产软件将在之后再写写看。这是程序员们使用的基本工具，Linus Torwalds发起的版本控制软件，计算机科学快速分发共享的github正是于此建立。如同学所说去中心化的计算机科学的发展催化了开源，微软在收购github之后也正式高调加入了开源软件运动，这才有了.Net和c#的开源，这才使得如今在中美贸易战的情况下，我们中国人依然可以开发像[SeeSharp](https://github.com/SeeSharpOpenSource/SeeSharpTools)这样优秀(笑)的想要设法替代[NI LabVIEW](http://www.ni.com/zh-cn.html)的[行业软件](http://www.jytek.com/home)。
+<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>
+<span class="line-numbers"> <a href="#n9" name="n9">9</a></span>git可以记录并显示文件的修改历史，还可以进行不同历史版本的比较，如果需要可以退回上次的修改。这里所讲都是deepin linux下的内容(简单!)，win操作系统的请自行百度。
+<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>
+<span class="line-numbers"><a href="#n11" name="n11">11</a></span>(自己之前都没有写下来该怎么用，还经常忘记，今天又发生了代码误删的情况所以这回要把git学会了)(2017年11月的某一天)
+<span class="line-numbers"><a href="#n12" name="n12">12</a></span>
+<span class="line-numbers"><a href="#n13" name="n13">13</a></span>首先是检查git的版本:
+<span class="line-numbers"><a href="#n14" name="n14">14</a></span>
+<span class="line-numbers"><a href="#n15" name="n15">15</a></span>```
+<span class="line-numbers"><a href="#n16" name="n16">16</a></span>$git --version 
+<span class="line-numbers"><a href="#n17" name="n17">17</a></span>git version 1.8.2.1
+<span class="line-numbers"><a href="#n18" name="n18">18</a></span>```
+<span class="line-numbers"><a href="#n19" name="n19">19</a></span>
+<span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>下一步是了解基本概念，什么是git(也可以跳过直接看使用):
+<span class="line-numbers"><a href="#n21" name="n21">21</a></span>
+<span class="line-numbers"><a href="#n22" name="n22">22</a></span>在Git中，每个版本库都叫做一个仓库（repository），每个仓库可以简单理解成一个目录，这个目录里面的所有文件都通过Git来实现版本管理，Git都能跟踪并记录在该目录下所有内容(子目录递归包含)发生的所有更新。假如我们现在建立一个仓库，仓库所在的这个目录中会有一个”.git”的文件夹(ls -al查看)。.git这个文件夹非常重要，所有的版本信息、更新记录，以及Git进行仓库管理的相关信息全都保存在这个文件夹里面。所以，想要删除该目录的git仓库设置，就删除该文件夹即可。
+<span class="line-numbers"><a href="#n23" name="n23">23</a></span>
+<span class="line-numbers"><a href="#n24" name="n24">24</a></span>接下来就是使用，主要就是如下命令按顺序试试，基本就会了:
+<span class="line-numbers"><a href="#n25" name="n25">25</a></span>
+<span class="line-numbers"><a href="#n26" name="n26">26</a></span>```
+<span class="line-numbers"><a href="#n27" name="n27">27</a></span>$git init //在当前目录(工作目录)初始化仓库
+<span class="line-numbers"><a href="#n28" name="n28">28</a></span>#已初始化空的 Git 仓库于 /home/cuixf/abc/.git/
+<span class="line-numbers"><a href="#n29" name="n29">29</a></span>$git status //此时查看工作目录状态，如果有文件会显示
+<span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span>#位于分支 master
+<span class="line-numbers"><a href="#n31" name="n31">31</a></span>#
+<span class="line-numbers"><a href="#n32" name="n32">32</a></span>#初始提交
+<span class="line-numbers"><a href="#n33" name="n33">33</a></span>#
+<span class="line-numbers"><a href="#n34" name="n34">34</a></span>#未跟踪的文件:
+<span class="line-numbers"><a href="#n35" name="n35">35</a></span>#  （使用 &quot;git add &amp;lt;文件&amp;gt;...&quot; 以包含要提交的内容）
+<span class="line-numbers"><a href="#n36" name="n36">36</a></span>#
+<span class="line-numbers"><a href="#n37" name="n37">37</a></span>#  a.txt
+<span class="line-numbers"><a href="#n38" name="n38">38</a></span>#  a/
+<span class="line-numbers"><a href="#n39" name="n39">39</a></span>#
+<span class="line-numbers"><strong><a href="#n40" name="n40">40</a></strong></span>#提交为空，但是存在尚未跟踪的文件（使用 &quot;git add&quot; 建立跟踪）
+<span class="line-numbers"><a href="#n41" name="n41">41</a></span>```
+<span class="line-numbers"><a href="#n42" name="n42">42</a></span>
+<span class="line-numbers"><a href="#n43" name="n43">43</a></span>```
+<span class="line-numbers"><a href="#n44" name="n44">44</a></span>$git add . //注意有个&quot;.&quot;，表示把&quot;./&quot;目录下的所有文件添加到Git里，建立工作空间Workspace，这时如果再次查看，&quot;git status&quot;可以看到新增了文件
+<span class="line-numbers"><a href="#n45" name="n45">45</a></span>$ git commit -m &quot;test1&quot; //这里提交工作目录的当前版本给Git，可以输入此次修改的注释信息如&quot;test1&quot;，可以看到所有文件提交成功:
+<span class="line-numbers"><a href="#n46" name="n46">46</a></span>#[master（根提交） 64f42d0] test1
+<span class="line-numbers"><a href="#n47" name="n47">47</a></span># 3 files changed, 0 insertions(+), 0 deletions(-)
+<span class="line-numbers"><a href="#n48" name="n48">48</a></span># create mode 100644 a.txt
+<span class="line-numbers"><a href="#n49" name="n49">49</a></span># create mode 100644 a/b.txt
+<span class="line-numbers"><strong><a href="#n50" name="n50">50</a></strong></span># create mode 100644 a/c/c.txt
+<span class="line-numbers"><a href="#n51" name="n51">51</a></span>git status //再次查看，发现目前版本提交完毕
+<span class="line-numbers"><a href="#n52" name="n52">52</a></span>#On branch master
+<span class="line-numbers"><a href="#n53" name="n53">53</a></span>#nothing to commit (working directory clean)
+<span class="line-numbers"><a href="#n54" name="n54">54</a></span>```
+<span class="line-numbers"><a href="#n55" name="n55">55</a></span>
+<span class="line-numbers"><a href="#n56" name="n56">56</a></span>最主要的对文件修改历史进行比较，如果此时已经修改工作目录的文件，修改保存后，输入
+<span class="line-numbers"><a href="#n57" name="n57">57</a></span>
+<span class="line-numbers"><a href="#n58" name="n58">58</a></span>```
+<span class="line-numbers"><a href="#n59" name="n59">59</a></span>$ git status //发现已经出现修改
+<span class="line-numbers"><strong><a href="#n60" name="n60">60</a></strong></span>$ git diff //即可显示修改了什么，会有++,--这样的符号也就是删减情况，另外还可以使用图形GUI界面(gitk命令)看，确认修改后先如上add然后commit即可保存当前版本
+<span class="line-numbers"><a href="#n61" name="n61">61</a></span>```
+<span class="line-numbers"><a href="#n62" name="n62">62</a></span>
+<span class="line-numbers"><a href="#n63" name="n63">63</a></span>另外如果联网后，想要下载/上传自己的仓库到远程服务器，可以看git的命令(clone,push,pull?)，看看github的基本用法。
+<span class="line-numbers"><a href="#n64" name="n64">64</a></span>
+<span class="line-numbers"><a href="#n65" name="n65">65</a></span>```
+<span class="line-numbers"><a href="#n66" name="n66">66</a></span>$git clone/push/pull
+<span class="line-numbers"><a href="#n67" name="n67">67</a></span>```
+</pre></div>
+</div>
+</div>
 
 <p>继续学习，可以学习分支branch(git merge/rebase)，看看回滚(git reset/revert/checkout)，看看远程管理(git remote/tag)等等。</p>
 
 <p>这些虽然说净是些程序员的东西，但是既然目前计算机科学做的很好，自由软件运动思想也很超前影响力很大，那么了解一下也是很好的。看纪录片<a href="https://www.bilibili.com/video/av9512574/">操作系统革命</a>，很有意思，影片中观点讲述了自由软件运动整体的发展过程，其基本观点是讲，电脑如果受限于win这样的商业的操作系统，购买的电脑就像是租的，受制于微软这家企业，所以自由软件运动让买了电脑的人可以真正拥有自己的电脑，最终使个人电脑提供的各种计算资源回到了个人的手中。现在的开放研究运动其实也在很大程度上受到自由软件运动的启发，要将科学研究的创新劳动过程带回到人的本质上来。</p>
 
-<p>当然物理学在开放研究方面一直做的都比较好，处在前沿位置<a href="https://scoap3.org/what-is-scoap3/">SCOAP</a>，发展劲头一直都在继续<a href="https://theconversation.com/how-the-insights-of-the-large-hadron-collider-are-being-made-open-to-everyone-70283">How the insights of the Large Hadron Collider are being made open to everyone</a>，未来的物理学发展可能超乎我们现在的想象。</p>
+<p>当然物理学在开放研究方面一直做的都比较好，处在前沿位置<a href="https://scoap3.org/what-is-scoap3/">SCOAP</a>，发展劲头一直都在继续<a href="https://theconversation.com/how-the-insights-of-the-large-hadron-collider-are-being-made-open-to-everyone-70283">How the insights of the Large Hadron Collider are being made open to
+everyone</a>，未来的物理学发展可能超乎我们现在的想象。</p>
 
 <p>参考1:<a href="http://www.cnblogs.com/wilber2013/category/643754.html">Git Step by Step</a>
 参考2:<a href="http://www.cnblogs.com/xiaoya901109/">IronMan</a></p>
 
-<div><table align="right"><td align="right" bgcolor="#FFFFFF" width="100"><font color="#F0F0F0">~~继续思考~~</font></td></table><br />
-<table align="right"><td align="right" bgcolor="#F5F5F5" width="300"><font color="#000000">-------开放研究之所以可能</font></td></table></div>
+<div><table align="right"><td align="right" bgcolor="#FFFFFF" width="200"><font color="#F0F0F0">~~继续思考~~</font></td></table><br /><table align="right"><td align="right" bgcolor="#F5F5F5" width="300"><font color="#000000">-------开放研究之所以可能</font></td></table></div>
 
 
             
@@ -205,7 +209,6 @@ var idcomments_post_url;
 
             
         </main>
-
         <div class="footer-copyright">
     <div class="container-fluid">
         <div class="row-fluid">
@@ -228,6 +231,7 @@ var idcomments_post_url;
   ga('send', 'pageview');
 
 </script>
+
 
 
     </body>
