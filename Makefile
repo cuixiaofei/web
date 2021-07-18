@@ -7,6 +7,8 @@ SHELL := /bin/bash
 deploy:
 	git add .
 	git commit -m "update"
+
+push:
 	git push origin gh-pages
 	git log
 
@@ -18,6 +20,8 @@ show:
 showurl:
 	git remote show origin
 
+
 #拷贝现有的库
 cloneweb:
 	git clone https://github.com/cuixiaofei/web.git
+
